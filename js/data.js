@@ -1,0 +1,64 @@
+// The only data access point. Seed = data/<collection>.json (read-only);
+// the first write copies a collection into localStorage (`app:<collection>`),
+// which is then the source of truth for it. Reads never write.
+const PREFIX = 'app:';
+const seedCache = new Map();
+
+async function seed(collection) {
+  if (!seedCache.has(collection)) {
+    const url = new URL(`../data/${collection}.json`, import.meta.url);
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`Cannot load data/${collection}.json (${res.status})`);
+    seedCache.set(collection, await res.json());
+  }
+  return seedCache.get(collection);
+}
+
+async function load(collection) {
+  const stored = localStorage.getItem(PREFIX + collection);
+  const items = stored ? JSON.parse(stored) : await seed(collection);
+  return structuredClone(items);
+}
+
+function save(collection, items) {
+  localStorage.setItem(PREFIX + collection, JSON.stringify(items));
+}
+
+export async function getAll(collection) {
+  return load(collection);
+}
+
+export async function get(collection, id) {
+  return (await load(collection)).find((item) => item.id === id);
+}
+
+export async function create(collection, item) {
+  const items = await load(collection);
+  const created = { ...item, id: item.id ?? crypto.randomUUID() };
+  items.push(created);
+  save(collection, items);
+  return created;
+}
+
+export async function update(collection, id, changes) {
+  const items = await load(collection);
+  const index = items.findIndex((item) => item.id === id);
+  if (index === -1) return undefined;
+  items[index] = { ...items[index], ...changes };
+  save(collection, items);
+  return items[index];
+}
+
+export async function remove(collection, id) {
+  const items = await load(collection);
+  const next = items.filter((item) => item.id !== id);
+  save(collection, next);
+  return next.length !== items.length;
+}
+
+// Back to seed state: clears every `app:*` key.
+export function reset() {
+  Object.keys(localStorage)
+    .filter((key) => key.startsWith(PREFIX))
+    .forEach((key) => localStorage.removeItem(key));
+}

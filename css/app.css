@@ -1,0 +1,43 @@
+/* FreshPath theme: Herb Garden. Values from the style guide; (d) = derived to complete the M3 set */
+body.light {
+  --primary: #24583B;                  /* main actions, active tab, selection */
+  --on-primary: #FFFFFF;
+  --primary-container: #BFEBCB;        /* (d) */
+  --on-primary-container: #00210F;     /* (d) */
+  --secondary: #4F6354;                /* (d) */
+  --on-secondary: #FFFFFF;
+  --secondary-container: #CFE3C2;      /* OK displays, tonal buttons, selected chip */
+  --on-secondary-container: #1E2420;
+  --tertiary: #F59E0B;                 /* accent: Low, waste risk (10%) */
+  --on-tertiary: #1E2420;              /* dark text on accent, never white */
+  --tertiary-container: #FFDDB3;       /* (d) soft warning background */
+  --on-tertiary-container: #2A1800;    /* (d) */
+  --error: #BA1A1A;                    /* Empty display */
+  --on-error: #FFFFFF;
+  --error-container: #FFDAD6;          /* Empty tile fill */
+  --on-error-container: #93000A;
+  --background: #F6F4EE;               /* 60% base */
+  --on-background: #1E2420;
+  --surface: #F6F4EE;                  /* screen background */
+  --on-surface: #1E2420;               /* main text */
+  --surface-variant: #E1E4DC;          /* (d) */
+  --on-surface-variant: #555B57;       /* secondary text */
+  --outline: #8A918C;                  /* borders, dashed map frame */
+  --outline-variant: #C4C8C0;          /* (d) dividers */
+  --shadow: #000000;
+  --scrim: #000000;
+  --inverse-surface: #2F3330;          /* (d) snackbar */
+  --inverse-on-surface: #EFF1EA;       /* (d) */
+  --inverse-primary: #A4D3B1;          /* (d) snackbar action */
+  --surface-dim: #D9D7D0;              /* (d) */
+  --surface-bright: #FBF9F4;           /* (d) */
+  --surface-container-lowest: #FFFFFF;
+  --surface-container-low: #FFFFFF;    /* article (cards) = white on cream */
+  --surface-container: #FFFFFF;        /* map, chips */
+  --surface-container-high: #EEEDE6;   /* (d) */
+  --surface-container-highest: #E7E6DF;/* (d) */
+}
+
+/* Typography: Roboto everywhere, Roboto Serif Bold for titles and display letters */
+body { --font: Roboto, "Noto Sans", Arial, sans-serif; }
+:is(h1, h2, h3, h4, h5, h6), .display-letter, .wordmark { font-family: "Roboto Serif", serif; font-weight: 700; }

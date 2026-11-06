@@ -235,7 +235,7 @@ One step per chat. Start each chat with `/designlog`, read this file, build the 
 - [x] **1 · Extend the seed data** (see Data).
   Done when: each file in `data/` opens in the browser (`localhost:8000/data/…json`) without a JSON error; avocados, strawberries and basil each have 5 substitutes ranked 1–5; every substitute has a summary, factors with Good/Risk, an amount and placement steps; for basil none has enough storage; Mia has today's manager notes, a "coming up" item and 3 decisions (2 with feedback). No existing value in displays/products/store changed.
 
-- [ ] **2 · App shell, theme, router, data layer.** `index.html` (head per DESIGN 4.0, top bar with logo, four tabs), `css/app.css` (Herb Garden + fonts), `js/app.js`, `js/router.js`, `js/data.js`, placeholder views per tab.
+- [x] **2 · App shell, theme, router, data layer.** `index.html` (head per DESIGN 4.0, top bar with logo, four tabs), `css/app.css` (Herb Garden + fonts), `js/app.js`, `js/router.js`, `js/data.js`, placeholder views per tab.
   Done when: the page shows the cream background, green tab underline, Roboto Serif title; tabs switch between four placeholder screens and the active tab is marked; an unknown hash (`#/xyz`) lands on Overview; in the console `localStorage` has no `app:` keys yet.
 
 - [ ] **3 · Login, auth guard, Profile.** Screen 0, `js/auth.js`, 13 (without Replay intro).
