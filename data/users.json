@@ -6,7 +6,8 @@
     "password": "demo1234",
     "role": "Employee",
     "startedOn": "2026-10-06",
-    "avatar": "MV"
+    "avatar": "MV",
+    "shift": "12:00–20:30"
   },
   {
     "id": "u2",
@@ -15,6 +16,7 @@
     "password": "demo1234",
     "role": "Manager",
     "startedOn": "2019-03-01",
-    "avatar": "SB"
+    "avatar": "SB",
+    "shift": "08:00–16:30"
   }
 ]

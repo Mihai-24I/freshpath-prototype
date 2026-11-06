@@ -232,7 +232,7 @@ Logic in `data.js` (not seed): status per display (DESIGN 7.3), available substi
 
 One step per chat. Start each chat with `/designlog`, read this file, build the step, tick it here. For every step that changes a screen, the agent takes before/after screenshots (CLAUDE.md). Test with `node ../freshpath-tools/serve.js` from the project folder, then open http://localhost:8000 (use your phone width or DevTools at 412 × 898). After each step, once you OK the commit and push, the same build is on GitHub Pages for testing on your phone.
 
-- [ ] **1 · Extend the seed data** (see Data).
+- [x] **1 · Extend the seed data** (see Data).
   Done when: each file in `data/` opens in the browser (`localhost:8000/data/…json`) without a JSON error; avocados, strawberries and basil each have 5 substitutes ranked 1–5; every substitute has a summary, factors with Good/Risk, an amount and placement steps; for basil none has enough storage; Mia has today's manager notes, a "coming up" item and 3 decisions (2 with feedback). No existing value in displays/products/store changed.
 
 - [ ] **2 · App shell, theme, router, data layer.** `index.html` (head per DESIGN 4.0, top bar with logo, four tabs), `css/app.css` (Herb Garden + fonts), `js/app.js`, `js/router.js`, `js/data.js`, placeholder views per tab.

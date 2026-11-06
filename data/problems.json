@@ -1,0 +1,22 @@
+[
+  {
+    "id": "sold-fast",
+    "label": "Sold faster than expected",
+    "icon": "trending_up"
+  },
+  {
+    "id": "no-delivery",
+    "label": "Delivery did not arrive",
+    "icon": "local_shipping"
+  },
+  {
+    "id": "quality",
+    "label": "Quality was not good enough",
+    "icon": "thumb_down"
+  },
+  {
+    "id": "promo-change",
+    "label": "Promo changed or started",
+    "icon": "sell"
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "id": "dec-1",
+    "userId": "u1",
+    "displayId": "d-a",
+    "fromProductId": "p-pear",
+    "toProductId": "p-apple-red",
+    "amount": 28,
+    "problemId": "quality",
+    "note": "Pears from storage were too soft for the table.",
+    "reasonIds": [],
+    "ownChoice": true,
+    "ownReason": "The pears were too soft after the weekend. The apples were fresh and firm.",
+    "photo": true,
+    "createdAt": "2026-10-27T12:35:00",
+    "feedback": null
+  },
+  {
+    "id": "dec-2",
+    "userId": "u1",
+    "displayId": "d-i",
+    "fromProductId": "p-cucumber",
+    "toProductId": "p-pepper",
+    "amount": 14,
+    "problemId": "sold-fast",
+    "note": "Cucumbers sold out after the lunch rush.",
+    "reasonIds": [
+      "same-category",
+      "in-stock",
+      "same-price"
+    ],
+    "ownChoice": false,
+    "ownReason": null,
+    "photo": true,
+    "createdAt": "2026-10-26T15:35:00",
+    "feedback": {
+      "by": "u2",
+      "text": "Good call. Peppers keep longer. Next time add the pack price sign.",
+      "at": "2026-10-26T16:20:00"
+    }
+  },
+  {
+    "id": "dec-3",
+    "userId": "u1",
+    "displayId": "d-f",
+    "fromProductId": "p-blueberry",
+    "toProductId": "p-kiwi",
+    "amount": 18,
+    "problemId": "no-delivery",
+    "note": null,
+    "reasonIds": [
+      "same-category",
+      "in-stock"
+    ],
+    "ownChoice": false,
+    "ownReason": null,
+    "photo": false,
+    "createdAt": "2026-10-26T12:40:00",
+    "feedback": {
+      "by": "u2",
+      "text": "Right choice, green kiwis keep for 8 days. Thanks.",
+      "at": "2026-10-27T08:20:00"
+    }
+  }
+]

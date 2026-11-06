@@ -28,5 +28,20 @@
     "id": "waste-risk",
     "label": "Waste risk",
     "explanation": "This product spoils soon. Placing it on a busy promo display helps it sell before it has to be thrown away."
+  },
+  {
+    "id": "demand-today",
+    "label": "Demand today",
+    "explanation": "Some products sell faster in the afternoon. A product that sells well keeps the display full and cuts waste."
+  },
+  {
+    "id": "cooling",
+    "label": "Cooling",
+    "explanation": "Cooled products need a cooled display. On an ambient table they spoil fast, so check the display type before you place them."
+  },
+  {
+    "id": "promo-rules",
+    "label": "Promo rules",
+    "explanation": "Customers come for the promo price. A product outside the promo needs its own price label, or customers expect the promo price."
   }
 ]

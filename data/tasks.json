@@ -7,7 +7,10 @@
     "title": "Refill display C",
     "detail": "Avocados are low",
     "status": "open",
-    "due": "2026-10-27T14:00:00"
+    "due": "2026-10-27T14:00:00",
+    "createdBy": "system",
+    "kind": "task",
+    "date": "2026-10-27"
   },
   {
     "id": "t2",
@@ -17,7 +20,10 @@
     "title": "Refill display E",
     "detail": "Strawberries are empty",
     "status": "open",
-    "due": "2026-10-27T14:00:00"
+    "due": "2026-10-27T14:00:00",
+    "createdBy": "system",
+    "kind": "task",
+    "date": "2026-10-27"
   },
   {
     "id": "t3",
@@ -27,7 +33,10 @@
     "title": "Refill display H",
     "detail": "Basil is empty",
     "status": "open",
-    "due": "2026-10-27T14:30:00"
+    "due": "2026-10-27T14:30:00",
+    "createdBy": "system",
+    "kind": "task",
+    "date": "2026-10-27"
   },
   {
     "id": "t4",
@@ -37,7 +46,10 @@
     "title": "Check bananas on display B",
     "detail": "Remove brown bananas",
     "status": "open",
-    "due": "2026-10-27T16:00:00"
+    "due": "2026-10-27T16:00:00",
+    "createdBy": "u2",
+    "kind": "task",
+    "date": "2026-10-27"
   },
   {
     "id": "t5",
@@ -47,6 +59,100 @@
     "title": "Refill display A",
     "detail": "Apples were low",
     "status": "done",
-    "due": "2026-10-27T10:00:00"
+    "due": "2026-10-27T10:00:00",
+    "createdBy": "system",
+    "kind": "task",
+    "date": "2026-10-27"
+  },
+  {
+    "id": "t6",
+    "userId": "all",
+    "type": "note",
+    "displayId": null,
+    "title": "Priority of the day",
+    "detail": "Availability first: keep the promo displays full before 15:00.",
+    "status": "open",
+    "due": null,
+    "createdBy": "u2",
+    "kind": "note",
+    "date": "2026-10-27"
+  },
+  {
+    "id": "t7",
+    "userId": "all",
+    "type": "note",
+    "displayId": null,
+    "title": "Strawberry delivery is late",
+    "detail": "Strawberries arrive tomorrow morning. Offer berries from Cold room 2 on display E.",
+    "status": "open",
+    "due": null,
+    "createdBy": "u2",
+    "kind": "note",
+    "date": "2026-10-27"
+  },
+  {
+    "id": "t8",
+    "userId": "u1",
+    "type": "check",
+    "displayId": null,
+    "title": "Check dates in Cold room 2",
+    "detail": "Move anything that expires within 2 days to the front rack.",
+    "status": "open",
+    "due": "2026-10-27T15:30:00",
+    "createdBy": "u2",
+    "kind": "task",
+    "date": "2026-10-27"
+  },
+  {
+    "id": "t9",
+    "userId": "all",
+    "type": "note",
+    "displayId": null,
+    "title": "New basil supplier",
+    "detail": "The first delivery arrives Thursday morning. Check the pots before you place them.",
+    "status": "open",
+    "due": null,
+    "createdBy": "u2",
+    "kind": "note",
+    "date": "2026-10-29"
+  },
+  {
+    "id": "t10",
+    "userId": "u1",
+    "type": "check",
+    "displayId": "d-a",
+    "title": "Check shelf labels on display A",
+    "detail": "Prices change on Wednesday morning.",
+    "status": "open",
+    "due": "2026-10-28T09:30:00",
+    "createdBy": "u2",
+    "kind": "task",
+    "date": "2026-10-28"
+  },
+  {
+    "id": "t11",
+    "userId": "u2",
+    "type": "order",
+    "displayId": null,
+    "title": "Order avocados for Friday",
+    "detail": "Ask for ready-to-eat boxes.",
+    "status": "open",
+    "due": "2026-10-27T16:00:00",
+    "createdBy": "u2",
+    "kind": "task",
+    "date": "2026-10-27"
+  },
+  {
+    "id": "t12",
+    "userId": "u2",
+    "type": "review",
+    "displayId": null,
+    "title": "Review this shift's decisions",
+    "detail": "Leave feedback on the decisions from today.",
+    "status": "open",
+    "due": "2026-10-27T15:00:00",
+    "createdBy": "u2",
+    "kind": "task",
+    "date": "2026-10-27"
   }
 ]

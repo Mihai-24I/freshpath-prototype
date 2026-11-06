@@ -18,7 +18,62 @@
     "wasteRisk": {
       "level": "medium",
       "note": "Sell within 2 days"
-    }
+    },
+    "summary": "Mangoes are ripe today and in stock. Sell within 2 days. 12 pcs fill display C.",
+    "factors": [
+      {
+        "reasonId": "ripe-today",
+        "rating": "good",
+        "text": "Ripe today, ready to eat"
+      },
+      {
+        "reasonId": "in-stock",
+        "rating": "good",
+        "text": "48 in storage, 12 needed"
+      },
+      {
+        "reasonId": "same-price",
+        "rating": "good",
+        "text": "€€, same as avocados"
+      },
+      {
+        "reasonId": "promo-rules",
+        "rating": "good",
+        "text": "Fits the 2 for €3 promo"
+      },
+      {
+        "reasonId": "cooling",
+        "rating": "good",
+        "text": "No cooling needed on display C"
+      },
+      {
+        "reasonId": "demand-today",
+        "rating": "good",
+        "text": "Tropical fruit sells well on this table"
+      },
+      {
+        "reasonId": "waste-risk",
+        "rating": "risk",
+        "text": "Sell within 2 days"
+      }
+    ],
+    "tags": [
+      "waste"
+    ],
+    "amountMax": 20,
+    "placementSteps": [
+      "Take the mangoes from the Ripening room, oldest date first.",
+      "Remove empty avocado crates and wipe the table.",
+      "Stack the mangoes two layers high, ripest in front.",
+      "Put the 2 for €3 sign next to the mangoes."
+    ],
+    "getFrom": {
+      "location": "Ripening room",
+      "rack": "Rack 2",
+      "note": "Oldest date first"
+    },
+    "expectedSales": 14,
+    "nextTopUp": "2026-10-27T17:30:00"
   },
   {
     "id": "s2",
@@ -36,7 +91,55 @@
     ],
     "amount": 15,
     "placement": "Whole display C",
-    "wasteRisk": null
+    "wasteRisk": null,
+    "summary": "Gold kiwis are in stock and in the same price range. They sell slower than avocados. 15 pcs fill display C.",
+    "factors": [
+      {
+        "reasonId": "in-stock",
+        "rating": "good",
+        "text": "30 in storage, 15 needed"
+      },
+      {
+        "reasonId": "same-category",
+        "rating": "good",
+        "text": "Tropical fruit, like avocados"
+      },
+      {
+        "reasonId": "same-price",
+        "rating": "good",
+        "text": "€€, same as avocados"
+      },
+      {
+        "reasonId": "fits-display",
+        "rating": "good",
+        "text": "Small fruit, looks full with 15"
+      },
+      {
+        "reasonId": "promo-rules",
+        "rating": "good",
+        "text": "Fits the 2 for €3 promo"
+      },
+      {
+        "reasonId": "demand-today",
+        "rating": "risk",
+        "text": "Sells slower than avocados in the afternoon"
+      }
+    ],
+    "tags": [],
+    "amountMax": 28,
+    "placementSteps": [
+      "Take the gold kiwis from Cold room 1, oldest date first.",
+      "Remove empty avocado crates and wipe the table.",
+      "Spread the kiwis in one layer across the table.",
+      "Put the 2 for €3 sign next to the kiwis."
+    ],
+    "getFrom": {
+      "location": "Cold room 1",
+      "rack": "Rack 2",
+      "note": "Oldest date first"
+    },
+    "expectedSales": 10,
+    "nextTopUp": "2026-10-27T18:00:00"
   },
   {
     "id": "s3",
@@ -57,7 +160,62 @@
     "wasteRisk": {
       "level": "medium",
       "note": "Sell within 2 days"
-    }
+    },
+    "summary": "Raspberries are berries and ripe today. Sell within 2 days. 12 punnets fill display E.",
+    "factors": [
+      {
+        "reasonId": "same-category",
+        "rating": "good",
+        "text": "Berries, same shelf type"
+      },
+      {
+        "reasonId": "ripe-today",
+        "rating": "good",
+        "text": "Ripe today"
+      },
+      {
+        "reasonId": "in-stock",
+        "rating": "good",
+        "text": "30 punnets in storage, 12 needed"
+      },
+      {
+        "reasonId": "same-price",
+        "rating": "good",
+        "text": "€€, same as strawberries"
+      },
+      {
+        "reasonId": "cooling",
+        "rating": "good",
+        "text": "Display E is cooled"
+      },
+      {
+        "reasonId": "promo-rules",
+        "rating": "good",
+        "text": "Fits the €2.49 offer"
+      },
+      {
+        "reasonId": "waste-risk",
+        "rating": "risk",
+        "text": "Sell within 2 days"
+      }
+    ],
+    "tags": [
+      "waste"
+    ],
+    "amountMax": 20,
+    "placementSteps": [
+      "Take the raspberries from Cold room 2, oldest date first.",
+      "Remove empty strawberry crates and wipe the shelf.",
+      "Place the punnets in two rows, ripest in front.",
+      "Put the €2.49 this week sign next to the raspberries."
+    ],
+    "getFrom": {
+      "location": "Cold room 2",
+      "rack": "Rack 1",
+      "note": "Oldest date first"
+    },
+    "expectedSales": 10,
+    "nextTopUp": "2026-10-27T17:00:00"
   },
   {
     "id": "s4",
@@ -74,7 +232,55 @@
     ],
     "amount": 10,
     "placement": "Display E, two rows",
-    "wasteRisk": null
+    "wasteRisk": null,
+    "summary": "Blueberries are berries and keep for 6 days. 10 punnets fill display E.",
+    "factors": [
+      {
+        "reasonId": "same-category",
+        "rating": "good",
+        "text": "Berries, same shelf type"
+      },
+      {
+        "reasonId": "in-stock",
+        "rating": "good",
+        "text": "24 punnets in storage, 10 needed"
+      },
+      {
+        "reasonId": "ripe-today",
+        "rating": "good",
+        "text": "Ripe today"
+      },
+      {
+        "reasonId": "waste-risk",
+        "rating": "good",
+        "text": "Keeps for 6 days, low waste risk"
+      },
+      {
+        "reasonId": "cooling",
+        "rating": "good",
+        "text": "Display E is cooled"
+      },
+      {
+        "reasonId": "promo-rules",
+        "rating": "good",
+        "text": "Fits the €2.49 offer"
+      }
+    ],
+    "tags": [],
+    "amountMax": 18,
+    "placementSteps": [
+      "Take the blueberries from Cold room 2, oldest date first.",
+      "Remove empty strawberry crates and wipe the shelf.",
+      "Place the punnets in two rows.",
+      "Put the €2.49 this week sign next to the blueberries."
+    ],
+    "getFrom": {
+      "location": "Cold room 2",
+      "rack": "Rack 2",
+      "note": "Oldest date first"
+    },
+    "expectedSales": 8,
+    "nextTopUp": "2026-10-27T18:00:00"
   },
   {
     "id": "s5",
@@ -90,7 +296,55 @@
     ],
     "amount": 8,
     "placement": "Display H",
-    "wasteRisk": null
+    "wasteRisk": null,
+    "summary": "Coriander is a fresh herb in the same pot size. None is in storage. 8 pots fill display H.",
+    "factors": [
+      {
+        "reasonId": "same-category",
+        "rating": "good",
+        "text": "Fresh herbs, same pot size"
+      },
+      {
+        "reasonId": "fits-display",
+        "rating": "good",
+        "text": "Pots fit display H"
+      },
+      {
+        "reasonId": "cooling",
+        "rating": "good",
+        "text": "Display H is cooled"
+      },
+      {
+        "reasonId": "same-price",
+        "rating": "good",
+        "text": "€, same as basil"
+      },
+      {
+        "reasonId": "ripe-today",
+        "rating": "good",
+        "text": "Ripe today"
+      },
+      {
+        "reasonId": "in-stock",
+        "rating": "risk",
+        "text": "None in storage, 8 needed"
+      }
+    ],
+    "tags": [],
+    "amountMax": 16,
+    "placementSteps": [
+      "Take the coriander pots from Cold room 2, oldest date first.",
+      "Wipe the shelf of display H.",
+      "Place the pots in rows, leaves facing out.",
+      "Check the price label."
+    ],
+    "getFrom": {
+      "location": "Cold room 2",
+      "rack": "Rack 6",
+      "note": "Oldest date first"
+    },
+    "expectedSales": 7,
+    "nextTopUp": "2026-10-27T18:00:00"
   },
   {
     "id": "s6",
@@ -106,6 +360,659 @@
     ],
     "amount": 8,
     "placement": "Display H",
-    "wasteRisk": null
+    "wasteRisk": null,
+    "summary": "Parsley is a fresh herb in the same pot size. None is in storage. 8 pots fill display H.",
+    "factors": [
+      {
+        "reasonId": "same-category",
+        "rating": "good",
+        "text": "Fresh herbs, same pot size"
+      },
+      {
+        "reasonId": "fits-display",
+        "rating": "good",
+        "text": "Pots fit display H"
+      },
+      {
+        "reasonId": "cooling",
+        "rating": "good",
+        "text": "Display H is cooled"
+      },
+      {
+        "reasonId": "same-price",
+        "rating": "good",
+        "text": "€, cheaper than basil"
+      },
+      {
+        "reasonId": "ripe-today",
+        "rating": "good",
+        "text": "Ripe today"
+      },
+      {
+        "reasonId": "in-stock",
+        "rating": "risk",
+        "text": "None in storage, 8 needed"
+      }
+    ],
+    "tags": [],
+    "amountMax": 16,
+    "placementSteps": [
+      "Take the parsley pots from Cold room 2, oldest date first.",
+      "Wipe the shelf of display H.",
+      "Place the pots in rows, leaves facing out.",
+      "Check the price label."
+    ],
+    "getFrom": {
+      "location": "Cold room 2",
+      "rack": "Rack 6",
+      "note": "Oldest date first"
+    },
+    "expectedSales": 6,
+    "nextTopUp": "2026-10-27T18:00:00"
+  },
+  {
+    "id": "s7",
+    "forProductId": "p-avocado",
+    "productId": "p-pear",
+    "rank": 3,
+    "reasonIds": [
+      "ripe-today",
+      "in-stock",
+      "fits-display"
+    ],
+    "reasonText": [
+      "Ripe today, 40 in storage",
+      "Keeps for 6 days"
+    ],
+    "amount": 14,
+    "placement": "Whole display C",
+    "wasteRisk": null,
+    "summary": "Pears are ripe today and in stock. They cost less than avocados. 14 pcs fill display C.",
+    "factors": [
+      {
+        "reasonId": "ripe-today",
+        "rating": "good",
+        "text": "Ripe today, ready to eat"
+      },
+      {
+        "reasonId": "in-stock",
+        "rating": "good",
+        "text": "40 in storage, 14 needed"
+      },
+      {
+        "reasonId": "fits-display",
+        "rating": "good",
+        "text": "Stacks well, looks full with 14"
+      },
+      {
+        "reasonId": "cooling",
+        "rating": "good",
+        "text": "No cooling needed on display C"
+      },
+      {
+        "reasonId": "promo-rules",
+        "rating": "good",
+        "text": "Can be sold 2 for €3"
+      },
+      {
+        "reasonId": "same-price",
+        "rating": "risk",
+        "text": "€, cheaper than avocados (€€)"
+      },
+      {
+        "reasonId": "same-category",
+        "rating": "risk",
+        "text": "Pears, not tropical fruit"
+      }
+    ],
+    "tags": [],
+    "amountMax": 24,
+    "placementSteps": [
+      "Take the pears from Cold room 1, oldest date first.",
+      "Check for soft spots and set those aside.",
+      "Stack the pears in rows, ripest in front.",
+      "Put the 2 for €3 sign next to the pears."
+    ],
+    "getFrom": {
+      "location": "Cold room 1",
+      "rack": "Rack 3",
+      "note": "Oldest date first"
+    },
+    "expectedSales": 9,
+    "nextTopUp": "2026-10-27T18:00:00"
+  },
+  {
+    "id": "s8",
+    "forProductId": "p-avocado",
+    "productId": "p-pineapple",
+    "rank": 4,
+    "reasonIds": [
+      "in-stock",
+      "same-category",
+      "same-price"
+    ],
+    "reasonText": [
+      "16 in storage, keeps for 5 days",
+      "Tropical fruit, same price range"
+    ],
+    "amount": 8,
+    "placement": "Centre of display C",
+    "wasteRisk": null,
+    "summary": "Pineapples are in stock and in the same price range. They are not in the 2 for €3 promo. 8 pcs fill display C.",
+    "factors": [
+      {
+        "reasonId": "in-stock",
+        "rating": "good",
+        "text": "16 in storage, 8 needed"
+      },
+      {
+        "reasonId": "same-category",
+        "rating": "good",
+        "text": "Tropical fruit, like avocados"
+      },
+      {
+        "reasonId": "same-price",
+        "rating": "good",
+        "text": "€€, same as avocados"
+      },
+      {
+        "reasonId": "cooling",
+        "rating": "good",
+        "text": "No cooling needed on display C"
+      },
+      {
+        "reasonId": "fits-display",
+        "rating": "risk",
+        "text": "Large fruit, 8 fill only half of display C"
+      },
+      {
+        "reasonId": "promo-rules",
+        "rating": "risk",
+        "text": "Not in the 2 for €3 promo, needs its own price label"
+      }
+    ],
+    "tags": [
+      "promo"
+    ],
+    "amountMax": 12,
+    "placementSteps": [
+      "Take the pineapples from the Ripening room.",
+      "Remove empty avocado crates and wipe the table.",
+      "Place the pineapples upright, crowns facing out.",
+      "Replace the 2 for €3 sign with a pineapple price label."
+    ],
+    "getFrom": {
+      "location": "Ripening room",
+      "rack": "Rack 4",
+      "note": "Oldest date first"
+    },
+    "expectedSales": 6,
+    "nextTopUp": "2026-10-27T17:30:00"
+  },
+  {
+    "id": "s9",
+    "forProductId": "p-avocado",
+    "productId": "p-papaya",
+    "rank": 5,
+    "reasonIds": [
+      "ripe-today",
+      "same-category",
+      "waste-risk"
+    ],
+    "reasonText": [
+      "Ripe today, same price range",
+      "Only 4 in storage"
+    ],
+    "amount": 8,
+    "placement": "Front row of display C",
+    "wasteRisk": {
+      "level": "high",
+      "note": "Sell today"
+    },
+    "summary": "Papayas are ripe today and in the same price range. Only 4 are in storage and they must sell today. 8 pcs fill display C.",
+    "factors": [
+      {
+        "reasonId": "ripe-today",
+        "rating": "good",
+        "text": "Ripe today, ready to eat"
+      },
+      {
+        "reasonId": "same-category",
+        "rating": "good",
+        "text": "Tropical fruit, like avocados"
+      },
+      {
+        "reasonId": "same-price",
+        "rating": "good",
+        "text": "€€, same as avocados"
+      },
+      {
+        "reasonId": "promo-rules",
+        "rating": "good",
+        "text": "Fits the 2 for €3 promo"
+      },
+      {
+        "reasonId": "in-stock",
+        "rating": "risk",
+        "text": "Only 4 in storage, 8 needed"
+      },
+      {
+        "reasonId": "waste-risk",
+        "rating": "risk",
+        "text": "Sell today"
+      }
+    ],
+    "tags": [
+      "waste"
+    ],
+    "amountMax": 14,
+    "placementSteps": [
+      "Take the papayas from the Ripening room.",
+      "Check each papaya for soft spots.",
+      "Place the papayas in one layer at the front.",
+      "Put the 2 for €3 sign next to the papayas."
+    ],
+    "getFrom": {
+      "location": "Ripening room",
+      "rack": "Rack 2",
+      "note": "Oldest date first"
+    },
+    "expectedSales": 7,
+    "nextTopUp": "2026-10-27T17:00:00"
+  },
+  {
+    "id": "s10",
+    "forProductId": "p-strawberry",
+    "productId": "p-blackberry",
+    "rank": 3,
+    "reasonIds": [
+      "same-category",
+      "in-stock",
+      "same-price"
+    ],
+    "reasonText": [
+      "Berries, same shelf type",
+      "18 punnets in storage"
+    ],
+    "amount": 10,
+    "placement": "Display E, two rows",
+    "wasteRisk": null,
+    "summary": "Blackberries are berries and in stock. They sell slower than strawberries. 10 punnets fill display E.",
+    "factors": [
+      {
+        "reasonId": "same-category",
+        "rating": "good",
+        "text": "Berries, same shelf type"
+      },
+      {
+        "reasonId": "in-stock",
+        "rating": "good",
+        "text": "18 punnets in storage, 10 needed"
+      },
+      {
+        "reasonId": "ripe-today",
+        "rating": "good",
+        "text": "Ripe today"
+      },
+      {
+        "reasonId": "same-price",
+        "rating": "good",
+        "text": "€€, same as strawberries"
+      },
+      {
+        "reasonId": "cooling",
+        "rating": "good",
+        "text": "Display E is cooled"
+      },
+      {
+        "reasonId": "promo-rules",
+        "rating": "good",
+        "text": "Fits the €2.49 offer"
+      },
+      {
+        "reasonId": "demand-today",
+        "rating": "risk",
+        "text": "Sells slower than strawberries"
+      }
+    ],
+    "tags": [],
+    "amountMax": 16,
+    "placementSteps": [
+      "Take the blackberries from Cold room 2, oldest date first.",
+      "Remove empty strawberry crates and wipe the shelf.",
+      "Place the punnets in two rows.",
+      "Put the €2.49 this week sign next to the blackberries."
+    ],
+    "getFrom": {
+      "location": "Cold room 2",
+      "rack": "Rack 2",
+      "note": "Oldest date first"
+    },
+    "expectedSales": 7,
+    "nextTopUp": "2026-10-27T18:00:00"
+  },
+  {
+    "id": "s11",
+    "forProductId": "p-strawberry",
+    "productId": "p-cherry",
+    "rank": 4,
+    "reasonIds": [
+      "in-stock",
+      "fits-display"
+    ],
+    "reasonText": [
+      "14 packs in storage, keeps for 4 days",
+      "Cooled fruit, fits display E"
+    ],
+    "amount": 8,
+    "placement": "Display E, front row",
+    "wasteRisk": null,
+    "summary": "Cherries are cooled and in stock. They are not in the €2.49 offer. 8 packs fill display E.",
+    "factors": [
+      {
+        "reasonId": "in-stock",
+        "rating": "good",
+        "text": "14 packs in storage, 8 needed"
+      },
+      {
+        "reasonId": "cooling",
+        "rating": "good",
+        "text": "Display E is cooled"
+      },
+      {
+        "reasonId": "ripe-today",
+        "rating": "good",
+        "text": "Ripe today"
+      },
+      {
+        "reasonId": "same-price",
+        "rating": "risk",
+        "text": "€€€, dearer than strawberries"
+      },
+      {
+        "reasonId": "promo-rules",
+        "rating": "risk",
+        "text": "Not in the €2.49 offer, needs its own price label"
+      },
+      {
+        "reasonId": "same-category",
+        "rating": "risk",
+        "text": "Stone fruit, not a berry"
+      }
+    ],
+    "tags": [
+      "promo"
+    ],
+    "amountMax": 12,
+    "placementSteps": [
+      "Take the cherries from Cold room 2, oldest date first.",
+      "Remove empty strawberry crates and wipe the shelf.",
+      "Place the packs in one row at the front.",
+      "Add a price label for the cherries."
+    ],
+    "getFrom": {
+      "location": "Cold room 2",
+      "rack": "Rack 3",
+      "note": "Oldest date first"
+    },
+    "expectedSales": 5,
+    "nextTopUp": "2026-10-27T18:30:00"
+  },
+  {
+    "id": "s12",
+    "forProductId": "p-strawberry",
+    "productId": "p-grape-red",
+    "rank": 5,
+    "reasonIds": [
+      "same-price",
+      "fits-display"
+    ],
+    "reasonText": [
+      "Same price range, keeps for 7 days",
+      "Packs stack well on display E"
+    ],
+    "amount": 8,
+    "placement": "Display E, two rows",
+    "wasteRisk": null,
+    "summary": "Red grapes are in the same price range. Only 4 are in storage. 8 packs fill display E.",
+    "factors": [
+      {
+        "reasonId": "same-price",
+        "rating": "good",
+        "text": "€€, same as strawberries"
+      },
+      {
+        "reasonId": "fits-display",
+        "rating": "good",
+        "text": "Packs stack well on display E"
+      },
+      {
+        "reasonId": "promo-rules",
+        "rating": "good",
+        "text": "Fits the €2.49 offer"
+      },
+      {
+        "reasonId": "cooling",
+        "rating": "good",
+        "text": "No cooling needed, display E is cooled"
+      },
+      {
+        "reasonId": "in-stock",
+        "rating": "risk",
+        "text": "Only 4 in storage, 8 needed"
+      },
+      {
+        "reasonId": "same-category",
+        "rating": "risk",
+        "text": "Grapes, not a berry"
+      }
+    ],
+    "tags": [],
+    "amountMax": 14,
+    "placementSteps": [
+      "Take the grapes from Cold room 1, oldest date first.",
+      "Remove empty strawberry crates and wipe the shelf.",
+      "Stack the packs two high.",
+      "Put the €2.49 this week sign next to the grapes."
+    ],
+    "getFrom": {
+      "location": "Cold room 1",
+      "rack": "Rack 5",
+      "note": "Oldest date first"
+    },
+    "expectedSales": 6,
+    "nextTopUp": "2026-10-27T18:00:00"
+  },
+  {
+    "id": "s13",
+    "forProductId": "p-basil",
+    "productId": "p-mint",
+    "rank": 3,
+    "reasonIds": [
+      "same-category",
+      "fits-display"
+    ],
+    "reasonText": [
+      "Fresh herbs, same pot size"
+    ],
+    "amount": 8,
+    "placement": "Display H",
+    "wasteRisk": null,
+    "summary": "Mint is a fresh herb in the same pot size. Only 3 are in storage. 8 pots fill display H.",
+    "factors": [
+      {
+        "reasonId": "same-category",
+        "rating": "good",
+        "text": "Fresh herbs, same pot size"
+      },
+      {
+        "reasonId": "fits-display",
+        "rating": "good",
+        "text": "Pots fit display H"
+      },
+      {
+        "reasonId": "cooling",
+        "rating": "good",
+        "text": "Display H is cooled"
+      },
+      {
+        "reasonId": "same-price",
+        "rating": "good",
+        "text": "€, same price range as basil"
+      },
+      {
+        "reasonId": "in-stock",
+        "rating": "risk",
+        "text": "Only 3 in storage, 8 needed"
+      },
+      {
+        "reasonId": "demand-today",
+        "rating": "risk",
+        "text": "Sells slower than basil"
+      }
+    ],
+    "tags": [],
+    "amountMax": 16,
+    "placementSteps": [
+      "Take the mint pots from Cold room 2, oldest date first.",
+      "Wipe the shelf of display H.",
+      "Place the pots in rows, leaves facing out.",
+      "Check the price label."
+    ],
+    "getFrom": {
+      "location": "Cold room 2",
+      "rack": "Rack 6",
+      "note": "Oldest date first"
+    },
+    "expectedSales": 5,
+    "nextTopUp": "2026-10-27T18:30:00"
+  },
+  {
+    "id": "s14",
+    "forProductId": "p-basil",
+    "productId": "p-thyme",
+    "rank": 4,
+    "reasonIds": [
+      "same-category",
+      "fits-display"
+    ],
+    "reasonText": [
+      "Fresh herbs, same pot size"
+    ],
+    "amount": 8,
+    "placement": "Display H",
+    "wasteRisk": null,
+    "summary": "Thyme is a fresh herb in the same pot size. Only 5 are in storage. 8 pots fill display H.",
+    "factors": [
+      {
+        "reasonId": "same-category",
+        "rating": "good",
+        "text": "Fresh herbs, same pot size"
+      },
+      {
+        "reasonId": "fits-display",
+        "rating": "good",
+        "text": "Pots fit display H"
+      },
+      {
+        "reasonId": "cooling",
+        "rating": "good",
+        "text": "Display H is cooled"
+      },
+      {
+        "reasonId": "same-price",
+        "rating": "good",
+        "text": "€, same price range as basil"
+      },
+      {
+        "reasonId": "in-stock",
+        "rating": "risk",
+        "text": "Only 5 in storage, 8 needed"
+      },
+      {
+        "reasonId": "demand-today",
+        "rating": "risk",
+        "text": "Sells slower than basil"
+      }
+    ],
+    "tags": [],
+    "amountMax": 16,
+    "placementSteps": [
+      "Take the thyme pots from Cold room 2, oldest date first.",
+      "Wipe the shelf of display H.",
+      "Place the pots in rows, leaves facing out.",
+      "Check the price label."
+    ],
+    "getFrom": {
+      "location": "Cold room 2",
+      "rack": "Rack 6",
+      "note": "Oldest date first"
+    },
+    "expectedSales": 5,
+    "nextTopUp": "2026-10-27T18:30:00"
+  },
+  {
+    "id": "s15",
+    "forProductId": "p-basil",
+    "productId": "p-chives",
+    "rank": 5,
+    "reasonIds": [
+      "same-category",
+      "fits-display"
+    ],
+    "reasonText": [
+      "Fresh herbs, same pot size"
+    ],
+    "amount": 6,
+    "placement": "Display H",
+    "wasteRisk": null,
+    "summary": "Chives is a fresh herb in the same pot size. Only 2 are in storage. 6 pots fill display H.",
+    "factors": [
+      {
+        "reasonId": "same-category",
+        "rating": "good",
+        "text": "Fresh herbs, same pot size"
+      },
+      {
+        "reasonId": "fits-display",
+        "rating": "good",
+        "text": "Pots fit display H"
+      },
+      {
+        "reasonId": "cooling",
+        "rating": "good",
+        "text": "Display H is cooled"
+      },
+      {
+        "reasonId": "same-price",
+        "rating": "good",
+        "text": "€, same price range as basil"
+      },
+      {
+        "reasonId": "in-stock",
+        "rating": "risk",
+        "text": "Only 2 in storage, 6 needed"
+      },
+      {
+        "reasonId": "demand-today",
+        "rating": "risk",
+        "text": "Sells slower than basil"
+      }
+    ],
+    "tags": [],
+    "amountMax": 16,
+    "placementSteps": [
+      "Take the chives pots from Cold room 2, oldest date first.",
+      "Wipe the shelf of display H.",
+      "Place the pots in rows, leaves facing out.",
+      "Check the price label."
+    ],
+    "getFrom": {
+      "location": "Cold room 2",
+      "rack": "Rack 6",
+      "note": "Oldest date first"
+    },
+    "expectedSales": 4,
+    "nextTopUp": "2026-10-27T18:30:00"
   }
 ]

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "intro-1",
+    "icon": "grid_view",
+    "title": "See what needs you",
+    "text": "The map shows which display is low or empty. Tap a tile to see its status."
+  },
+  {
+    "id": "intro-2",
+    "icon": "swap_horiz",
+    "title": "Find a substitute",
+    "text": "Tap Find alternatives. You get a ranked list, best match first."
+  },
+  {
+    "id": "intro-3",
+    "icon": "lightbulb",
+    "title": "Know why",
+    "text": "Every suggestion says why it fits, so you can explain it to your manager."
+  }
+]

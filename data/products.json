@@ -10,7 +10,10 @@
     "ripeness": "ripe",
     "storageQty": 60,
     "storageLocation": "Cold room 1",
-    "sellWithinDays": 10
+    "sellWithinDays": 10,
+    "needsCooling": false,
+    "promoEligible": true,
+    "rack": "Rack 1"
   },
   {
     "id": "p-banana",
@@ -23,7 +26,10 @@
     "ripeness": "ready",
     "storageQty": 48,
     "storageLocation": "Ripening room",
-    "sellWithinDays": 4
+    "sellWithinDays": 4,
+    "needsCooling": false,
+    "promoEligible": true,
+    "rack": "Rack 1"
   },
   {
     "id": "p-avocado",
@@ -36,7 +42,10 @@
     "ripeness": "ready",
     "storageQty": 0,
     "storageLocation": "Ripening room",
-    "sellWithinDays": 3
+    "sellWithinDays": 3,
+    "needsCooling": false,
+    "promoEligible": true,
+    "rack": "Rack 3"
   },
   {
     "id": "p-mango",
@@ -49,7 +58,10 @@
     "ripeness": "ripe",
     "storageQty": 48,
     "storageLocation": "Ripening room",
-    "sellWithinDays": 2
+    "sellWithinDays": 2,
+    "needsCooling": false,
+    "promoEligible": true,
+    "rack": "Rack 2"
   },
   {
     "id": "p-kiwi-gold",
@@ -62,7 +74,10 @@
     "ripeness": "ready",
     "storageQty": 30,
     "storageLocation": "Cold room 1",
-    "sellWithinDays": 7
+    "sellWithinDays": 7,
+    "needsCooling": false,
+    "promoEligible": true,
+    "rack": "Rack 2"
   },
   {
     "id": "p-orange",
@@ -75,7 +90,10 @@
     "ripeness": "ripe",
     "storageQty": 80,
     "storageLocation": "Cold room 1",
-    "sellWithinDays": 14
+    "sellWithinDays": 14,
+    "needsCooling": false,
+    "promoEligible": true,
+    "rack": "Rack 4"
   },
   {
     "id": "p-strawberry",
@@ -88,7 +106,10 @@
     "ripeness": "ripe",
     "storageQty": 0,
     "storageLocation": "Cold room 2",
-    "sellWithinDays": 2
+    "sellWithinDays": 2,
+    "needsCooling": true,
+    "promoEligible": true,
+    "rack": "Rack 1"
   },
   {
     "id": "p-raspberry",
@@ -101,7 +122,10 @@
     "ripeness": "ripe",
     "storageQty": 30,
     "storageLocation": "Cold room 2",
-    "sellWithinDays": 2
+    "sellWithinDays": 2,
+    "needsCooling": true,
+    "promoEligible": true,
+    "rack": "Rack 1"
   },
   {
     "id": "p-blueberry",
@@ -114,7 +138,10 @@
     "ripeness": "ripe",
     "storageQty": 24,
     "storageLocation": "Cold room 2",
-    "sellWithinDays": 6
+    "sellWithinDays": 6,
+    "needsCooling": true,
+    "promoEligible": true,
+    "rack": "Rack 2"
   },
   {
     "id": "p-kiwi",
@@ -127,7 +154,10 @@
     "ripeness": "ready",
     "storageQty": 40,
     "storageLocation": "Cold room 1",
-    "sellWithinDays": 8
+    "sellWithinDays": 8,
+    "needsCooling": false,
+    "promoEligible": true,
+    "rack": "Rack 2"
   },
   {
     "id": "p-cucumber",
@@ -140,7 +170,10 @@
     "ripeness": "ripe",
     "storageQty": 36,
     "storageLocation": "Cold room 1",
-    "sellWithinDays": 6
+    "sellWithinDays": 6,
+    "needsCooling": false,
+    "promoEligible": true,
+    "rack": "Rack 6"
   },
   {
     "id": "p-basil",
@@ -153,7 +186,10 @@
     "ripeness": "ripe",
     "storageQty": 0,
     "storageLocation": "Cold room 2",
-    "sellWithinDays": 3
+    "sellWithinDays": 3,
+    "needsCooling": true,
+    "promoEligible": true,
+    "rack": "Rack 6"
   },
   {
     "id": "p-coriander",
@@ -166,7 +202,10 @@
     "ripeness": "ripe",
     "storageQty": 0,
     "storageLocation": "Cold room 2",
-    "sellWithinDays": 3
+    "sellWithinDays": 3,
+    "needsCooling": true,
+    "promoEligible": true,
+    "rack": "Rack 6"
   },
   {
     "id": "p-parsley",
@@ -179,7 +218,10 @@
     "ripeness": "ripe",
     "storageQty": 0,
     "storageLocation": "Cold room 2",
-    "sellWithinDays": 4
+    "sellWithinDays": 4,
+    "needsCooling": true,
+    "promoEligible": true,
+    "rack": "Rack 6"
   },
   {
     "id": "p-pepper",
@@ -192,6 +234,153 @@
     "ripeness": "ripe",
     "storageQty": 22,
     "storageLocation": "Cold room 1",
-    "sellWithinDays": 7
+    "sellWithinDays": 7,
+    "needsCooling": false,
+    "promoEligible": true,
+    "rack": "Rack 7"
+  },
+  {
+    "id": "p-pear",
+    "name": "Conference pears",
+    "shortName": "Pears",
+    "category": "Apples & pears",
+    "unit": "pcs",
+    "price": 0.55,
+    "priceRange": "€",
+    "ripeness": "ripe",
+    "storageQty": 40,
+    "storageLocation": "Cold room 1",
+    "sellWithinDays": 6,
+    "needsCooling": false,
+    "promoEligible": true,
+    "rack": "Rack 3"
+  },
+  {
+    "id": "p-pineapple",
+    "name": "Pineapples",
+    "shortName": "Pineapples",
+    "category": "Tropical fruit",
+    "unit": "pcs",
+    "price": 2.29,
+    "priceRange": "€€",
+    "ripeness": "ripe",
+    "storageQty": 16,
+    "storageLocation": "Ripening room",
+    "sellWithinDays": 5,
+    "needsCooling": false,
+    "promoEligible": false,
+    "rack": "Rack 4"
+  },
+  {
+    "id": "p-papaya",
+    "name": "Papayas",
+    "shortName": "Papayas",
+    "category": "Tropical fruit",
+    "unit": "pcs",
+    "price": 2.19,
+    "priceRange": "€€",
+    "ripeness": "ripe",
+    "storageQty": 4,
+    "storageLocation": "Ripening room",
+    "sellWithinDays": 1,
+    "needsCooling": false,
+    "promoEligible": true,
+    "rack": "Rack 2"
+  },
+  {
+    "id": "p-blackberry",
+    "name": "Blackberries 125 g",
+    "shortName": "Blackberries",
+    "category": "Berries",
+    "unit": "punnet",
+    "price": 2.69,
+    "priceRange": "€€",
+    "ripeness": "ripe",
+    "storageQty": 18,
+    "storageLocation": "Cold room 2",
+    "sellWithinDays": 3,
+    "needsCooling": true,
+    "promoEligible": true,
+    "rack": "Rack 2"
+  },
+  {
+    "id": "p-cherry",
+    "name": "Cherries 500 g",
+    "shortName": "Cherries",
+    "category": "Stone fruit",
+    "unit": "pack",
+    "price": 4.49,
+    "priceRange": "€€€",
+    "ripeness": "ripe",
+    "storageQty": 14,
+    "storageLocation": "Cold room 2",
+    "sellWithinDays": 4,
+    "needsCooling": true,
+    "promoEligible": false,
+    "rack": "Rack 3"
+  },
+  {
+    "id": "p-grape-red",
+    "name": "Red grapes 500 g",
+    "shortName": "Red grapes",
+    "category": "Grapes",
+    "unit": "pack",
+    "price": 2.19,
+    "priceRange": "€€",
+    "ripeness": "ready",
+    "storageQty": 4,
+    "storageLocation": "Cold room 1",
+    "sellWithinDays": 7,
+    "needsCooling": false,
+    "promoEligible": true,
+    "rack": "Rack 5"
+  },
+  {
+    "id": "p-mint",
+    "name": "Fresh mint",
+    "shortName": "Mint",
+    "category": "Fresh herbs",
+    "unit": "pot",
+    "price": 1.49,
+    "priceRange": "€",
+    "ripeness": "ripe",
+    "storageQty": 3,
+    "storageLocation": "Cold room 2",
+    "sellWithinDays": 3,
+    "needsCooling": true,
+    "promoEligible": true,
+    "rack": "Rack 6"
+  },
+  {
+    "id": "p-thyme",
+    "name": "Fresh thyme",
+    "shortName": "Thyme",
+    "category": "Fresh herbs",
+    "unit": "pot",
+    "price": 1.49,
+    "priceRange": "€",
+    "ripeness": "ripe",
+    "storageQty": 5,
+    "storageLocation": "Cold room 2",
+    "sellWithinDays": 5,
+    "needsCooling": true,
+    "promoEligible": true,
+    "rack": "Rack 6"
+  },
+  {
+    "id": "p-chives",
+    "name": "Fresh chives",
+    "shortName": "Chives",
+    "category": "Fresh herbs",
+    "unit": "pot",
+    "price": 1.29,
+    "priceRange": "€",
+    "ripeness": "ripe",
+    "storageQty": 2,
+    "storageLocation": "Cold room 2",
+    "sellWithinDays": 3,
+    "needsCooling": true,
+    "promoEligible": true,
+    "rack": "Rack 6"
   }
 ]
