@@ -6,7 +6,7 @@ let root = null;
 let onClick = null;
 
 const SORTS = [
-  { id: 'sellby', label: 'Sell by' },
+  { id: 'sellby', label: 'Date' },
   { id: 'quantity', label: 'Quantity' },
   { id: 'promo', label: 'Promo' },
 ];
@@ -49,7 +49,8 @@ export async function render(el) {
   root = el;
   const [products, [store], suggestions] = await Promise.all([getAll('products'), getAll('store'), displaySuggestions()]);
   const inStorage = products.filter((p) => p.storageQty > 0);
-  let sort = 'sellby';
+  // Opens on Promo: stock that has to go out and fits a promo display comes first (user test task 6).
+  let sort = 'promo';
 
   el.innerHTML = `<div class="view">
     <div>

@@ -137,7 +137,7 @@ Routes are hash routes (AGENTS.md). The refill in progress (chosen display, prob
 
 ### 12 · Storage `#/storage`
 - **Purpose:** use stock before it spoils.
-- **Content:** title "Storage" + "Updated 13:42"; sort chips **Sell by** (default) · **Quantity** · **Promo**, active chip `fill`; one card per product in storage: name, qty + location, tag (`cancel` "Sell today" in error colours, `warning` "Sell within 2 days" in accent, plain "Sell within 6 days").
+- **Content:** title "Storage" + "Updated 13:42"; sort chips **Date** · **Quantity** · **Promo** (default: opens on stock that has to go out and fits a promo display), active chip `fill`; one card per product in storage: name, qty + location, tag (`cancel` "Sell today" in error colours, `warning` "Sell within 2 days" in accent, plain "Sell within 6 days").
 - **Actions:** outlined "Suggest display" on products that fit a Low/Empty display (found from `substitutes.json`) → Overview with that display selected and the card line "Mangoes from storage fit here"; tap a card → 18.
 - **Answers:** test task 6 (worked; red cue kept, U1 13:19, U4 05:35); "screen after Suggest display" (U2 07:16, 08:14); U2 10:33 sorting; story 4 (entry).
 
