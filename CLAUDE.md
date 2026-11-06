@@ -42,5 +42,6 @@ The designer loads `/designlog` (skill in `.claude/skills/designlog/`). On top o
   - In the log, link them as `🖼️ [before](screenshots/…png) · [after](screenshots/…png)`.
   - If `../freshpath-tools` is missing, ask once with the pop-up tool how to proceed (reinstall it, or skip screenshots this session).
 - **Reasons, asked at the moment.** When the designer changes direction without saying why, ask right away with the pop-up tool (likely reasons as options + "Other"). Log exactly what they pick or write. Never invent a reason; only use `✍️` if they chose to skip.
+- **Choices already in DESIGN.md are the designer's.** When a change follows something `DESIGN.md` states (a principle, token, component rule or don't), log it as started by the designer and don't mark it ✍️. The AI only applied it. If `DESIGN.md` gives the reason, write it in the "Why" line as the designer's own answer: first person, plain and short, as if typed in reply to the question "why?", in the present tense ("I want…", "it has to…"), not a quote. End with the section in brackets, e.g. `(DESIGN.md 3)`. Choices that `DESIGN.md` doesn't cover stay as they are: credit whoever started them and ask for the reason.
 - **Saving the log.** When the designer asks for the log, also save it as `designlog/YYYY-MM-DD_<topic>.md`. One file per session; never edit an earlier session's log.
 
