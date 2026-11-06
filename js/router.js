@@ -1,13 +1,19 @@
-// Hash router. Route table: pattern, lazy view, tab to mark active.
-// `auth: true` routes get their guard in step 3 (login).
+// Hash router + auth guard. Route table: pattern, lazy view, tab to mark active.
+// `auth: true` redirects to #/login without a session; `role` limits a route to Employee or Manager.
+import { currentUser, homeFor, rememberReturn } from './auth.js';
+
 const routes = [
-  { pattern: '/', view: () => import('./views/overview.js'), tab: 'overview' },
-  { pattern: '/tasks', view: () => import('./views/tasks.js'), tab: 'tasks' },
-  { pattern: '/storage', view: () => import('./views/storage.js'), tab: 'storage' },
-  { pattern: '/profile', view: () => import('./views/profile.js'), tab: 'profile' },
+  { pattern: '/login', view: () => import('./views/login.js'), shell: false },
+  { pattern: '/', view: () => import('./views/overview.js'), tab: 'overview', auth: true },
+  { pattern: '/tasks', view: () => import('./views/tasks.js'), tab: 'tasks', auth: true, role: 'Employee' },
+  { pattern: '/storage', view: () => import('./views/storage.js'), tab: 'storage', auth: true },
+  { pattern: '/profile', view: () => import('./views/profile.js'), tab: 'profile', auth: true },
+  { pattern: '/manager', view: () => import('./views/manager.js'), tab: 'team', auth: true, role: 'Manager' },
 ];
 
 const outlet = document.getElementById('app');
+const header = document.querySelector('header');
+const secondTab = document.getElementById('tab-second');
 let current = null;
 let renderId = 0;
 
@@ -38,6 +44,15 @@ function markTab(tab) {
   });
 }
 
+// The manager's second tab reads "Team" and opens the manager home (plan.md).
+function setShell(visible, user) {
+  header.hidden = !visible;
+  const manager = user?.role === 'Manager';
+  secondTab.textContent = manager ? 'Team' : 'Tasks';
+  secondTab.href = manager ? '#/manager' : '#/tasks';
+  secondTab.dataset.tab = manager ? 'team' : 'tasks';
+}
+
 async function render() {
   const id = ++renderId;
   const path = location.hash.replace(/^#/, '') || '/';
@@ -46,13 +61,32 @@ async function render() {
     location.replace('#/');
     return;
   }
-  const module = await found.route.view();
+  const { route } = found;
+  const user = await currentUser();
+  if (id !== renderId) return;
+
+  if (route.auth && !user) {
+    rememberReturn(location.hash);
+    location.replace('#/login');
+    return;
+  }
+  if (route.pattern === '/login' && user) {
+    location.replace(homeFor(user));
+    return;
+  }
+  if (route.role && user.role !== route.role) {
+    location.replace(homeFor(user));
+    return;
+  }
+
+  const module = await route.view();
   if (id !== renderId) return; // a newer navigation won
   if (current?.destroy) current.destroy();
   outlet.replaceChildren();
-  await module.render(outlet, found.params);
+  setShell(route.shell !== false, user);
+  await module.render(outlet, found.params, user);
   current = module;
-  markTab(found.route.tab);
+  markTab(route.tab);
 
   const heading = outlet.querySelector('h1');
   document.title = heading ? `${heading.textContent} · FreshPath` : 'FreshPath';

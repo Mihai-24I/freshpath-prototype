@@ -56,9 +56,15 @@ export async function remove(collection, id) {
   return next.length !== items.length;
 }
 
-// Back to seed state: clears every `app:*` key.
+// Session = plain user id under `app:session` (AGENTS.md). Only auth.js uses these.
+export const getSession = () => localStorage.getItem(PREFIX + 'session');
+export const setSession = (userId) => localStorage.setItem(PREFIX + 'session', userId);
+export const clearSession = () => localStorage.removeItem(PREFIX + 'session');
+
+// Back to seed state: clears every `app:*` key except the session, so the
+// demo user stays logged in after "Reset demo data".
 export function reset() {
   Object.keys(localStorage)
-    .filter((key) => key.startsWith(PREFIX))
+    .filter((key) => key.startsWith(PREFIX) && key !== PREFIX + 'session')
     .forEach((key) => localStorage.removeItem(key));
 }

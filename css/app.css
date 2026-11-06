@@ -38,6 +38,16 @@ body.light {
   --surface-container-highest: #E7E6DF;/* (d) */
 }
 
+/* Layout gaps beer.css doesn't cover */
+header[hidden] { display: none; }
+button, .button { min-block-size: 3rem; }   /* touch targets >= 48 dp (DESIGN 3) */
+.login { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.75rem; padding-block-start: 2rem; }
+.login form, .profile-actions { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.75rem; }
+.profile-actions { margin-block-start: 0.75rem; }
+.login form button, .profile-actions button { inline-size: 100%; box-sizing: border-box; margin: 0; }
+.list-plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; }
+dd { margin: 0 0 0.75rem; }
+
 /* Typography: Roboto everywhere, Roboto Serif Bold for titles and display letters */
 body { --font: Roboto, "Noto Sans", Arial, sans-serif; }
 :is(h1, h2, h3, h4, h5, h6), .display-letter, .wordmark { font-family: "Roboto Serif", serif; font-weight: 700; }

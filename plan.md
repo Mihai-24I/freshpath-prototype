@@ -238,7 +238,7 @@ One step per chat. Start each chat with `/designlog`, read this file, build the 
 - [x] **2 · App shell, theme, router, data layer.** `index.html` (head per DESIGN 4.0, top bar with logo, four tabs), `css/app.css` (Herb Garden + fonts), `js/app.js`, `js/router.js`, `js/data.js`, placeholder views per tab.
   Done when: the page shows the cream background, green tab underline, Roboto Serif title; tabs switch between four placeholder screens and the active tab is marked; an unknown hash (`#/xyz`) lands on Overview; in the console `localStorage` has no `app:` keys yet.
 
-- [ ] **3 · Login, auth guard, Profile.** Screen 0, `js/auth.js`, 13 (without Replay intro).
+- [x] **3 · Login, auth guard, Profile.** Screen 0, `js/auth.js`, 13 (without Replay intro).
   Done when: opening `#/tasks` logged out goes to Login and back to Tasks after logging in as Mia; a wrong password shows a field error; reload keeps you logged in; Profile shows Mia's details; Reset demo data and Log out work; Sam lands on a placeholder Team screen and `#/manager` as Mia goes to Overview.
 
 - [ ] **4 · Overview: map, tiles, chips, display card.** 2, `<app-store-map>`, `<app-display-tile>`, selection marker, all-OK state.
