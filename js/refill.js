@@ -33,5 +33,6 @@ export async function loadRefill() {
   }
   r.amount = Math.min(max, Math.max(min, r.amount));
 
-  return { display, product, sub, own, store, max, min, suggested, amount: r.amount };
+  const oldProduct = products.find((p) => p.id === display.productId);
+  return { display, product, oldProduct, sub, own, store, max, min, suggested, amount: r.amount };
 }

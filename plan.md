@@ -256,7 +256,7 @@ One step per chat. Start each chat with `/designlog`, read this file, build the 
 - [x] **8 · Amount and Placement.** 8, 9.
   Done when: Amount shows the suggested number, – / + change it within the limits, and the fill bar + status word update live; Placement shows where to get it, the steps (default steps for an own choice) and the promo box on C; "All placed" works without ticking steps.
 
-- [ ] **9 · Confirm, snackbar, undo.** 10, confirm rules in `data.js`, snackbar.
+- [x] **9 · Confirm, snackbar, undo.** 10, confirm rules in `data.js`, snackbar.
   Done when: Confirm shows old → new, amount and "Photo (optional)" with its reason; Confirm returns to Overview with "Display C updated" + Undo for 5 s and C shows its new status; storage of the product went down; task "Refill display C" is done; Undo puts everything back; after Reset demo data the seed state is back.
 
 - [ ] **10 · Tasks and My decisions.** 1, 14.

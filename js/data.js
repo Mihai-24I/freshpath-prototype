@@ -76,6 +76,49 @@ export async function availableSubstitutes(displayId) {
     .sort((a, b) => a.rank - b.rank);
 }
 
+// Confirming a refill (DESIGN 7.3): the display gets the new product and `amount` more on display (up to capacity),
+// the product's storage goes down, the display's open refill tasks are done and the decision is saved for My decisions.
+// Returns what undoRefill needs to put everything back.
+export async function confirmRefill({ displayId, productId, amount, userId, problemId, note, reasonIds, ownChoice, ownReason, photo }) {
+  const [displays, products, tasks, [store]] = await Promise.all([getAll('displays'), getAll('products'), getAll('tasks'), getAll('store')]);
+  const display = displays.find((d) => d.id === displayId);
+  const product = products.find((p) => p.id === productId);
+  const placed = Math.max(0, Math.min(amount, display.capacity - display.onDisplay, product.storageQty));
+  const before = { productId: display.productId, onDisplay: display.onDisplay };
+
+  await update('displays', display.id, { productId: product.id, onDisplay: display.onDisplay + placed });
+  await update('products', product.id, { storageQty: product.storageQty - placed });
+  const taskIds = tasks.filter((t) => t.type === 'refill' && t.displayId === displayId && t.status === 'open').map((t) => t.id);
+  for (const id of taskIds) await update('tasks', id, { status: 'done' });
+
+  // Demo time: the store's day, at the real clock time but never before the last sync.
+  const clock = new Date().toTimeString().slice(0, 8);
+  const syncClock = store.lastSync.slice(11, 19);
+  const decision = await create('decisions', {
+    userId,
+    displayId,
+    fromProductId: before.productId,
+    toProductId: product.id,
+    amount: placed,
+    problemId: problemId ?? null,
+    note: note || null,
+    reasonIds: reasonIds ?? [],
+    ownChoice: Boolean(ownChoice),
+    ownReason: ownReason || null,
+    photo: Boolean(photo),
+    createdAt: `${store.lastSync.slice(0, 10)}T${clock > syncClock ? clock : syncClock}`,
+    feedback: null,
+  });
+  return { displayId, before, productId, storageBefore: product.storageQty, taskIds, decisionId: decision.id };
+}
+
+export async function undoRefill(undo) {
+  await update('displays', undo.displayId, undo.before);
+  await update('products', undo.productId, { storageQty: undo.storageBefore });
+  for (const id of undo.taskIds) await update('tasks', id, { status: 'open' });
+  await remove('decisions', undo.decisionId);
+}
+
 // Session = plain user id under `app:session` (AGENTS.md). Only auth.js uses these.
 export const getSession = () => localStorage.getItem(PREFIX + 'session');
 export const setSession = (userId) => localStorage.setItem(PREFIX + 'session', userId);

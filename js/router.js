@@ -105,6 +105,11 @@ async function render() {
   }
 }
 
+// Re-render the current view, e.g. after Undo changed the data behind it.
+export function refresh() {
+  render();
+}
+
 export function start() {
   window.addEventListener('hashchange', render);
   render();
