@@ -47,6 +47,15 @@ button, .button { min-block-size: 3rem; }   /* touch targets >= 48 dp (DESIGN 3)
 .login form button, .profile-actions button { inline-size: 100%; box-sizing: border-box; margin: 0; }
 .list-plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; }
 dd { margin: 0 0 0.75rem; }
+/* Sub-screens (detail, problem, ...): one column, 12 dp gaps, back link stays small, other buttons fill the width */
+.view { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.75rem; }
+.view > .go-back { justify-self: start; margin-inline-start: -0.75rem; }
+.view > .button:not(.go-back) { margin: 0; box-sizing: border-box; }
+.view > p, .view > h1 { margin: 0; }
+.facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.75rem; margin: 0; }
+.facts.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.facts dd { margin: 0; }
+#app .promo-line { margin: 0.5rem 0 0; }
 
 /* beer.css 5.0.3 forces pill buttons with !important on --_round; DESIGN 4.3 wants 8 dp */
 button, .button, .chip { --_round: 0.5rem !important; }
