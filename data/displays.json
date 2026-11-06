@@ -1,0 +1,146 @@
+[
+  {
+    "id": "d-a",
+    "label": "A",
+    "productId": "p-apple-red",
+    "onDisplay": 28,
+    "capacity": 40,
+    "promo": null,
+    "type": "promo-table",
+    "unit": null,
+    "map": {
+      "x": 7.8,
+      "y": 10.4,
+      "w": 21.4,
+      "h": 15.1
+    }
+  },
+  {
+    "id": "d-b",
+    "label": "B",
+    "productId": "p-banana",
+    "onDisplay": 30,
+    "capacity": 36,
+    "promo": null,
+    "type": "promo-table",
+    "unit": null,
+    "map": {
+      "x": 70.8,
+      "y": 10.4,
+      "w": 21.4,
+      "h": 15.1
+    }
+  },
+  {
+    "id": "d-c",
+    "label": "C",
+    "productId": "p-avocado",
+    "onDisplay": 4,
+    "capacity": 35,
+    "promo": "2 for €3",
+    "type": "promo-table",
+    "unit": null,
+    "map": {
+      "x": 7.8,
+      "y": 41.5,
+      "w": 16.3,
+      "h": 15.1
+    }
+  },
+  {
+    "id": "d-d",
+    "label": "D",
+    "productId": "p-orange",
+    "onDisplay": 22,
+    "capacity": 30,
+    "promo": null,
+    "type": "gondola",
+    "unit": "unit-1",
+    "map": {
+      "x": 54.5,
+      "y": 41.5,
+      "w": 12.8,
+      "h": 15.1
+    }
+  },
+  {
+    "id": "d-e",
+    "label": "E",
+    "productId": "p-strawberry",
+    "onDisplay": 0,
+    "capacity": 24,
+    "promo": "€2.49 this week",
+    "type": "gondola",
+    "unit": "unit-1",
+    "map": {
+      "x": 66.9,
+      "y": 41.5,
+      "w": 12.8,
+      "h": 15.1
+    }
+  },
+  {
+    "id": "d-f",
+    "label": "F",
+    "productId": "p-kiwi",
+    "onDisplay": 18,
+    "capacity": 24,
+    "promo": null,
+    "type": "gondola",
+    "unit": "unit-1",
+    "map": {
+      "x": 79.4,
+      "y": 41.5,
+      "w": 12.8,
+      "h": 15.1
+    }
+  },
+  {
+    "id": "d-g",
+    "label": "G",
+    "productId": "p-cucumber",
+    "onDisplay": 15,
+    "capacity": 20,
+    "promo": null,
+    "type": "gondola",
+    "unit": "unit-2",
+    "map": {
+      "x": 26.5,
+      "y": 71.7,
+      "w": 12.8,
+      "h": 15.1
+    }
+  },
+  {
+    "id": "d-h",
+    "label": "H",
+    "productId": "p-basil",
+    "onDisplay": 0,
+    "capacity": 16,
+    "promo": null,
+    "type": "gondola",
+    "unit": "unit-2",
+    "map": {
+      "x": 38.9,
+      "y": 71.7,
+      "w": 12.8,
+      "h": 15.1
+    }
+  },
+  {
+    "id": "d-i",
+    "label": "I",
+    "productId": "p-pepper",
+    "onDisplay": 14,
+    "capacity": 18,
+    "promo": null,
+    "type": "gondola",
+    "unit": "unit-2",
+    "map": {
+      "x": 51.4,
+      "y": 71.7,
+      "w": 12.8,
+      "h": 15.1
+    }
+  }
+]

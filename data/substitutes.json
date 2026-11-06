@@ -1,0 +1,111 @@
+[
+  {
+    "id": "s1",
+    "forProductId": "p-avocado",
+    "productId": "p-mango",
+    "rank": 1,
+    "reasonIds": [
+      "ripe-today",
+      "in-stock",
+      "same-price"
+    ],
+    "reasonText": [
+      "Ripe today, 48 in storage",
+      "Same price range as avocados"
+    ],
+    "amount": 12,
+    "placement": "Front row of display C",
+    "wasteRisk": {
+      "level": "medium",
+      "note": "Sell within 2 days"
+    }
+  },
+  {
+    "id": "s2",
+    "forProductId": "p-avocado",
+    "productId": "p-kiwi-gold",
+    "rank": 2,
+    "reasonIds": [
+      "in-stock",
+      "same-category",
+      "fits-display"
+    ],
+    "reasonText": [
+      "30 in storage",
+      "Exotic fruit, fits next to the promo sign"
+    ],
+    "amount": 15,
+    "placement": "Whole display C",
+    "wasteRisk": null
+  },
+  {
+    "id": "s3",
+    "forProductId": "p-strawberry",
+    "productId": "p-raspberry",
+    "rank": 1,
+    "reasonIds": [
+      "same-category",
+      "ripe-today",
+      "same-price"
+    ],
+    "reasonText": [
+      "Berries, same shelf type",
+      "Ripe today, 30 punnets in storage"
+    ],
+    "amount": 12,
+    "placement": "Display E, two rows",
+    "wasteRisk": {
+      "level": "medium",
+      "note": "Sell within 2 days"
+    }
+  },
+  {
+    "id": "s4",
+    "forProductId": "p-strawberry",
+    "productId": "p-blueberry",
+    "rank": 2,
+    "reasonIds": [
+      "same-category",
+      "in-stock"
+    ],
+    "reasonText": [
+      "Berries, keep for 6 days",
+      "24 punnets in storage"
+    ],
+    "amount": 10,
+    "placement": "Display E, two rows",
+    "wasteRisk": null
+  },
+  {
+    "id": "s5",
+    "forProductId": "p-basil",
+    "productId": "p-coriander",
+    "rank": 1,
+    "reasonIds": [
+      "same-category",
+      "fits-display"
+    ],
+    "reasonText": [
+      "Fresh herbs, same pot size"
+    ],
+    "amount": 8,
+    "placement": "Display H",
+    "wasteRisk": null
+  },
+  {
+    "id": "s6",
+    "forProductId": "p-basil",
+    "productId": "p-parsley",
+    "rank": 2,
+    "reasonIds": [
+      "same-category",
+      "fits-display"
+    ],
+    "reasonText": [
+      "Fresh herbs, same pot size"
+    ],
+    "amount": 8,
+    "placement": "Display H",
+    "wasteRisk": null
+  }
+]

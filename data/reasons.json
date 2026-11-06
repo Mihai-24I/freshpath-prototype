@@ -1,0 +1,32 @@
+[
+  {
+    "id": "ripe-today",
+    "label": "Ripe today",
+    "explanation": "Ripe products sell fastest. Putting them out now means customers buy them before they go soft."
+  },
+  {
+    "id": "in-stock",
+    "label": "In storage",
+    "explanation": "There is enough in the back room to fill the display, so you won't have an empty spot again in an hour."
+  },
+  {
+    "id": "same-price",
+    "label": "Same price range",
+    "explanation": "Customers who came for the promo expect a similar price. A much more expensive product feels like a bait and switch."
+  },
+  {
+    "id": "same-category",
+    "label": "Same type of product",
+    "explanation": "Shoppers look for products by group. Berries next to berries keeps the display easy to understand."
+  },
+  {
+    "id": "fits-display",
+    "label": "Fits the display",
+    "explanation": "The product size and packaging fit this table, so it looks full with the amount suggested."
+  },
+  {
+    "id": "waste-risk",
+    "label": "Waste risk",
+    "explanation": "This product spoils soon. Placing it on a busy promo display helps it sell before it has to be thrown away."
+  }
+]

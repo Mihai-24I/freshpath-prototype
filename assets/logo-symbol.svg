@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="6 12 88 82" role="img" aria-labelledby="t">
+  <title id="t">FreshPath</title>
+  <mask id="slats"><rect x="0" y="0" width="100" height="100" fill="#fff"/><rect x="18" y="66" width="64" height="4" rx="2" fill="#000"/><rect x="18" y="76" width="64" height="4" rx="2" fill="#000"/></mask>
+  <circle cx="36" cy="44" r="15" fill="#F59E0B"/>
+  <circle cx="64" cy="45" r="14" fill="#CFE3C2"/>
+  <path d="M64 31 C64 26 66 23 70 21" stroke="#24583B" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M66 26 C70 19 78 19 82 22 C78 28 71 29 66 26Z" fill="#24583B"/>
+  <rect x="12" y="54" width="76" height="34" rx="4" fill="#24583B" mask="url(#slats)"/>
+</svg>

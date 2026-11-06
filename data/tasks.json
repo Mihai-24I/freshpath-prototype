@@ -1,0 +1,52 @@
+[
+  {
+    "id": "t1",
+    "userId": "u1",
+    "type": "refill",
+    "displayId": "d-c",
+    "title": "Refill display C",
+    "detail": "Avocados are low",
+    "status": "open",
+    "due": "2026-10-27T14:00:00"
+  },
+  {
+    "id": "t2",
+    "userId": "u1",
+    "type": "refill",
+    "displayId": "d-e",
+    "title": "Refill display E",
+    "detail": "Strawberries are empty",
+    "status": "open",
+    "due": "2026-10-27T14:00:00"
+  },
+  {
+    "id": "t3",
+    "userId": "u1",
+    "type": "refill",
+    "displayId": "d-h",
+    "title": "Refill display H",
+    "detail": "Basil is empty",
+    "status": "open",
+    "due": "2026-10-27T14:30:00"
+  },
+  {
+    "id": "t4",
+    "userId": "u1",
+    "type": "check",
+    "displayId": "d-b",
+    "title": "Check bananas on display B",
+    "detail": "Remove brown bananas",
+    "status": "open",
+    "due": "2026-10-27T16:00:00"
+  },
+  {
+    "id": "t5",
+    "userId": "u1",
+    "type": "refill",
+    "displayId": "d-a",
+    "title": "Refill display A",
+    "detail": "Apples were low",
+    "status": "done",
+    "due": "2026-10-27T10:00:00"
+  }
+]
