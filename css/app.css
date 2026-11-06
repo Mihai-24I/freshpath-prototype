@@ -71,6 +71,22 @@ dd { margin: 0 0 0.75rem; }
 .facts dd { margin: 0; }
 #app .promo-line { margin: 0.5rem 0 0; }
 
+/* Own choice: radio rows; the chosen row gets a thick primary border plus a filled check icon (not colour alone) */
+.product-list { display: grid; gap: 0.5rem; border: 0; margin: 0; padding: 0; min-inline-size: 0; }
+.product-option { position: relative; display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.75rem 1rem; box-sizing: border-box; background: var(--surface-container); border: 1px solid var(--outline-variant); border-radius: 0.5rem; cursor: pointer; }
+.product-option[hidden], .choice-detail[hidden] { display: none; }
+.product-option input { position: absolute; opacity: 0; inset: 0; margin: 0; inline-size: 100%; block-size: 100%; cursor: pointer; }
+.product-option .radio-on, .product-option:has(input:checked) .radio-off { display: none; }
+.product-option:has(input:checked) .radio-on { display: inline-block; color: var(--primary); }
+.product-option:has(input:checked) { border: 2px solid var(--primary); padding: calc(0.75rem - 1px) calc(1rem - 1px); background: var(--secondary-container); }
+.product-option:has(input:focus-visible) { outline: 2px solid var(--primary); outline-offset: 2px; }
+.product-text { flex: 1; min-inline-size: 0; }
+.product-text .tag-row { margin-block-start: 0.25rem; }
+.sticky-actions button { margin: 0; flex: 1; }
+.choice-detail { padding: 0.75rem; border-radius: 0.5rem; background: var(--tertiary-container); color: var(--on-tertiary-container); }
+.choice-detail .warnings:empty { display: none; }
+.warnings li { display: flex; gap: 0.5rem; align-items: flex-start; }
+
 /* beer.css 5.0.3 forces pill buttons with !important on --_round; DESIGN 4.3 wants 8 dp */
 button, .button, .chip { --_round: 0.5rem !important; }
 /* Classes with "margin" in the name make beer.css drop the parent's padding (:has(>[class*=margin])), so use these */

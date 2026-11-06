@@ -250,7 +250,7 @@ One step per chat. Start each chat with `/designlog`, read this file, build the 
 - [x] **6 · Alternatives and Why this suggestion.** 6, 7, no-substitute state with Report to manager.
   Done when: C and E show only available substitutes, best match first with the "Best match" tag; waste risk shows in accent and nothing is disabled; tapping a card opens "Why …?" with the summary on top and Good/Risk per factor, and a row expands to its explanation; H shows "No substitute in stock right now." and "Report to manager" returns to Overview with a snackbar and H still Empty.
 
-- [ ] **7 · Own choice.** 11.
+- [x] **7 · Own choice.** 11.
   Done when: "Choose my own product" opens the list; typing "ber" filters it; a cooled product shows "Needs cooling" and its warning but can still be used; the selected product is clearly marked; "Use this product" continues (to a placeholder Amount) with the own reason kept.
 
 - [ ] **8 · Amount and Placement.** 8, 9.

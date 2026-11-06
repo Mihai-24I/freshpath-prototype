@@ -23,6 +23,7 @@ export async function render(el, params) {
 
   if (state.refill?.displayId !== d.id) state.refill = { displayId: d.id, problemId: null, note: '' };
   state.refill.substituteId = s.id;
+  state.refill.own = null; // a suggestion replaces an earlier own choice
 
   el.innerHTML = `<div class="view">
     <a class="button transparent small-round go-back" href="#/displays/${esc(d.id)}/alternatives"><i aria-hidden="true">arrow_back</i><span>Back</span></a>
