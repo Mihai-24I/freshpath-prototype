@@ -92,6 +92,15 @@ dd { margin: 0 0 0.75rem; }
 .stepper button { margin: 0; flex: none; inline-size: 3rem; min-inline-size: 3rem; }
 .amount { font-size: 2.5rem; line-height: 1.2; font-weight: 500; text-align: center; }
 .amount .small-text { font-size: 1rem; }
+/* Tasks and My decisions */
+.tasks .task { display: flex; align-items: center; gap: 0.5rem; background: var(--surface-container); border-radius: 0.5rem; padding: 0.25rem 0.75rem; }
+.tasks .task .button { margin: 0; flex: none; }
+.tasks .checkbox { flex: 1; display: flex; align-items: center; min-block-size: 3rem; min-inline-size: 0; white-space: normal; }
+.tasks .checkbox > span { flex: 1; min-inline-size: 0; white-space: normal; }
+.tasks .task.done .task-title, .tasks .task.done .small-text { text-decoration: line-through; color: var(--on-surface-variant); }
+.task-text { display: grid; min-inline-size: 0; }
+.coming { display: flex; gap: 0.75rem; align-items: flex-start; }
+.feedback { padding: 0.75rem; border-radius: 0.5rem; background: var(--secondary-container); color: var(--on-secondary-container); }
 .photo-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
 .photo-row button { margin: 0; }
 .photo-row [hidden] { display: none; }

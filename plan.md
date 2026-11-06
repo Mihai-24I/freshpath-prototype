@@ -259,7 +259,7 @@ One step per chat. Start each chat with `/designlog`, read this file, build the 
 - [x] **9 · Confirm, snackbar, undo.** 10, confirm rules in `data.js`, snackbar.
   Done when: Confirm shows old → new, amount and "Photo (optional)" with its reason; Confirm returns to Overview with "Display C updated" + Undo for 5 s and C shows its new status; storage of the product went down; task "Refill display C" is done; Undo puts everything back; after Reset demo data the seed state is back.
 
-- [ ] **10 · Tasks and My decisions.** 1, 14.
+- [x] **10 · Tasks and My decisions.** 1, 14.
   Done when: Tasks shows today's manager notes on top (incl. the priority of the day), open tasks, done tasks struck through and "Coming up"; ticking a task gives a snackbar with Undo; "Open" on the C task goes to Overview with C selected; My decisions shows the 3 seeded decisions plus the one from step 9, with feedback where there is some.
 
 - [ ] **11 · Storage and Correct stock.** 12, 18.
