@@ -247,7 +247,7 @@ One step per chat. Start each chat with `/designlog`, read this file, build the 
 - [x] **5 · Display detail and Report problem.** 3, 4.
   Done when: "Open details" on C shows planned product, stock numbers, fill bar 11% Low, last refill and note; "Find alternatives" (from card or detail) opens "What's wrong at C?" with nothing selected; "Find replacement" works without picking a reason and goes to a placeholder Alternatives; there is no loading screen and no Edit button.
 
-- [ ] **6 · Alternatives and Why this suggestion.** 6, 7, no-substitute state with Report to manager.
+- [x] **6 · Alternatives and Why this suggestion.** 6, 7, no-substitute state with Report to manager.
   Done when: C and E show only available substitutes, best match first with the "Best match" tag; waste risk shows in accent and nothing is disabled; tapping a card opens "Why …?" with the summary on top and Good/Risk per factor, and a row expands to its explanation; H shows "No substitute in stock right now." and "Report to manager" returns to Overview with a snackbar and H still Empty.
 
 - [ ] **7 · Own choice.** 11.

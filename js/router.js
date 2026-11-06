@@ -9,6 +9,7 @@ const routes = [
   { pattern: '/displays/:id', view: () => import('./views/display-detail.js'), tab: 'overview', auth: true },
   { pattern: '/displays/:id/problem', view: () => import('./views/problem.js'), tab: 'overview', auth: true },
   { pattern: '/displays/:id/alternatives', view: () => import('./views/alternatives.js'), tab: 'overview', auth: true },
+  { pattern: '/displays/:id/alternatives/:substituteId', view: () => import('./views/why.js'), tab: 'overview', auth: true },
   { pattern: '/tasks', view: () => import('./views/tasks.js'), tab: 'tasks', auth: true, role: 'Employee' },
   { pattern: '/storage', view: () => import('./views/storage.js'), tab: 'storage', auth: true },
   { pattern: '/profile', view: () => import('./views/profile.js'), tab: 'profile', auth: true },

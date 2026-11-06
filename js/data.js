@@ -62,6 +62,20 @@ export function displayStatus({ onDisplay, capacity }) {
   return onDisplay <= capacity * 0.25 ? 'low' : 'ok';
 }
 
+// A substitute is available only when its product's storageQty >= the suggested amount (DESIGN 7.3).
+// Returns the display's available substitutes by rank, each with its `product`.
+export async function availableSubstitutes(displayId) {
+  const [displays, products, substitutes] = await Promise.all([getAll('displays'), getAll('products'), getAll('substitutes')]);
+  const display = displays.find((d) => d.id === displayId);
+  if (!display) return [];
+  const productById = new Map(products.map((p) => [p.id, p]));
+  return substitutes
+    .filter((s) => s.forProductId === display.productId)
+    .map((s) => ({ ...s, product: productById.get(s.productId) }))
+    .filter((s) => s.product && s.product.storageQty >= s.amount)
+    .sort((a, b) => a.rank - b.rank);
+}
+
 // Session = plain user id under `app:session` (AGENTS.md). Only auth.js uses these.
 export const getSession = () => localStorage.getItem(PREFIX + 'session');
 export const setSession = (userId) => localStorage.setItem(PREFIX + 'session', userId);
