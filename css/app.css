@@ -125,7 +125,13 @@ dd { margin: 0 0 0.75rem; }
 .tasks .task > .task-text { flex: 1; padding-block: 0.5rem; }
 
 /* Tasks and My decisions */
-.tasks .task { display: flex; align-items: center; gap: 0.5rem; background: var(--surface-container); border-radius: 0.5rem; padding: 0.25rem 0.75rem; }
+.tasks .task { display: flex; align-items: center; gap: 0.5rem; padding-block: 0.25rem; }
+/* Notes and today's tasks each sit in one card, items split by a thin line */
+.list-plain.list-divided { gap: 0; }
+.list-divided > li { border-radius: 0; }
+.list-divided > li + li { border-block-start: 1px solid var(--outline-variant); }
+.list-divided > .note { display: grid; gap: 0.5rem; padding-block: 0.75rem; }
+.list-divided > .note:last-child { padding-block-end: 0; }
 .tasks .task .button { margin: 0; flex: none; }
 .tasks .checkbox { flex: 1; display: flex; align-items: center; min-block-size: 3rem; min-inline-size: 0; white-space: normal; }
 .tasks .checkbox > span { flex: 1; min-inline-size: 0; white-space: normal; }

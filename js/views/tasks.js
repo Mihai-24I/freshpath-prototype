@@ -21,10 +21,10 @@ function taskHtml(t) {
 }
 
 function noteHtml(t) {
-  return `<article class="no-elevate small-round stack">
+  return `<li class="note">
     <h3 class="h6 small tight"><i aria-hidden="true">sticky_note_2</i> ${esc(t.title)}</h3>
     <p class="tight">${esc(t.detail)}</p>
-  </article>`;
+  </li>`;
 }
 
 function comingHtml(t) {
@@ -50,11 +50,11 @@ export async function render(el, params, user) {
         <h1 class="h5 small tight">Tasks</h1>
         <p class="small-text tight">${esc(formatDay(store.lastSync))} · shift ${esc(user.shift ?? store.shift)}</p>
       </div>
-      ${notes.length ? `<section class="stack" aria-labelledby="notes-title"><h2 class="h6 small tight" id="notes-title">Manager notes for today</h2>${notes.map(noteHtml).join('')}</section>` : ''}
-      <section class="stack" aria-labelledby="today-title">
-        <h2 class="h6 small tight" id="today-title">Today</h2>
-        ${list.length ? `<ul class="list-plain tasks">${list.map(taskHtml).join('')}</ul>` : '<p class="tight"><i aria-hidden="true">check_circle</i> Nothing to do. Nice work.</p>'}
-      </section>
+      ${notes.length ? `<article class="no-elevate small-round stack" aria-labelledby="notes-title"><h2 class="h6 small tight" id="notes-title">Manager notes for today</h2><ul class="list-plain list-divided">${notes.map(noteHtml).join('')}</ul></article>` : ''}
+      <article class="no-elevate small-round stack" aria-labelledby="today-title">
+        <h2 class="h6 small tight" id="today-title">Today's tasks</h2>
+        ${list.length ? `<ul class="list-plain list-divided tasks">${list.map(taskHtml).join('')}</ul>` : '<p class="tight"><i aria-hidden="true">check_circle</i> Nothing to do. Nice work.</p>'}
+      </article>
       ${later.length ? `<section class="stack" aria-labelledby="coming-title"><h2 class="h6 small tight" id="coming-title">Coming up</h2><ul class="list-plain">${later.map(comingHtml).join('')}</ul></section>` : ''}
       <a class="button border small-round" href="#/decisions">My decisions</a>
     </div>`;
