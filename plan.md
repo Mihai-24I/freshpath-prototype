@@ -253,7 +253,7 @@ One step per chat. Start each chat with `/designlog`, read this file, build the 
 - [x] **7 · Own choice.** 11.
   Done when: "Choose my own product" opens the list; typing "ber" filters it; a cooled product shows "Needs cooling" and its warning but can still be used; the selected product is clearly marked; "Use this product" continues (to a placeholder Amount) with the own reason kept.
 
-- [ ] **8 · Amount and Placement.** 8, 9.
+- [x] **8 · Amount and Placement.** 8, 9.
   Done when: Amount shows the suggested number, – / + change it within the limits, and the fill bar + status word update live; Placement shows where to get it, the steps (default steps for an own choice) and the promo box on C; "All placed" works without ticking steps.
 
 - [ ] **9 · Confirm, snackbar, undo.** 10, confirm rules in `data.js`, snackbar.
