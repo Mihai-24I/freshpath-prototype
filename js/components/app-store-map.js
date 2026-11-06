@@ -56,7 +56,10 @@ class AppStoreMap extends HTMLElement {
 
   #render() {
     const joins = this.#joins();
+    // The canvas has a minimum width in rem, so at a large system font the map scrolls sideways
+    // instead of squeezing the tiles until their text overlaps (DESIGN 3).
     this.innerHTML =
+      '<div class="map-canvas">' +
       this.#displays
         .map((d) => {
           const join = joins.get(d.id);
@@ -65,7 +68,8 @@ class AppStoreMap extends HTMLElement {
             ${join ? `join="${join}"` : ''}></app-display-tile>`;
         })
         .join('') +
-      '<span class="map-entrance small-text"><span>Entrance</span><i class="tiny" aria-hidden="true">arrow_downward</i></span>';
+      '<span class="map-entrance small-text"><span>Entrance</span><i class="tiny" aria-hidden="true">arrow_downward</i></span>' +
+      '</div>';
     this.#sync();
   }
 

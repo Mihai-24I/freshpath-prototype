@@ -40,6 +40,15 @@ body.light {
 
 /* Layout gaps beer.css doesn't cover */
 header[hidden] { display: none; }
+/* Large system font (DESIGN 3): the top bar keeps the page width and the tabs wrap onto a second row */
+header { padding-inline: 16px; }
+.tabs { flex-wrap: wrap; }
+/* Tab padding stays 1rem at normal size and stops growing with the font, so two tabs fit per row at 200% */
+.tabs > a { padding-inline: min(1rem, 4vw); inline-size: auto; flex: 1 1 auto; }
+/* Rows and grids may shrink to the screen and rows wrap instead of pushing content off it */
+#app .row, .tasks .task, #display-card nav { flex-wrap: wrap; }
+.list-plain, .factors, .product-list, .feedback-form { grid-template-columns: minmax(0, 1fr); }
+#avatar { inline-size: 3rem; block-size: 3rem; }   /* touch target >= 48 dp, the circle button is 40 wide by default */
 button, .button { min-block-size: 3rem; }   /* touch targets >= 48 dp (DESIGN 3) */
 .login { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.75rem; padding-block-start: 2rem; }
 .login form, .profile-actions { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.75rem; }
@@ -141,7 +150,9 @@ button, .button, .chip { --_round: 0.5rem !important; }
 app-store-map {
   display: block; margin-block-start: 0.75rem; position: relative; block-size: 16rem; box-sizing: border-box;
   background: var(--surface-container); border: 1.5px dashed var(--outline); border-radius: 0.5rem;
+  overflow-x: auto; overflow-y: hidden;
 }
+.map-canvas { position: relative; min-inline-size: 22rem; block-size: 100%; }
 app-display-tile { position: absolute; inset-inline-start: calc(var(--x) * 1%); inset-block-start: calc(var(--y) * 1%); inline-size: calc(var(--w) * 1%); block-size: calc(var(--h) * 1%); min-block-size: 3rem; }
 app-display-tile[hidden] { display: none; }
 app-display-tile button.tile {

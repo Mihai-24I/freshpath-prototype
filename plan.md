@@ -271,7 +271,7 @@ One step per chat. Start each chat with `/designlog`, read this file, build the 
 - [x] **13 · First-use intro.** 19, Replay intro in 13.
   Done when: Mia's first login after Reset shows the 3 cards; Skip and Start both go to Overview; the next login skips the intro; "Replay intro" in Profile shows it again.
 
-- [ ] **14 · Accessibility pass and GitHub Pages.**
+- [x] **14 · Accessibility pass and GitHub Pages.**
   Done when: every screen works with Tab / Enter / Esc and arrow keys on the map, focus moves to the heading after each route change; at 200% system font nothing is cut off and the main action is still reachable; all touch targets are ≥ 48 dp; the full refill flow works on the GitHub Pages URL on your phone (repo and Pages are set up already; all paths are relative).
 
 After step 14: heuristic analysis (10 heuristics) with screenshots, then breadboard V3 and updated user stories (HANDOVER "Still open").
