@@ -1,5 +1,5 @@
 // Fake auth (AGENTS.md): no hashing, no security. Users come from the `users` collection.
-import { getAll, create, getSession, setSession, clearSession } from './data.js';
+import { getAll, create, getSession, setSession, clearSession, hasSeenIntro } from './data.js';
 
 let returnTo = null; // route the user wanted before the guard sent them to Login
 
@@ -14,6 +14,9 @@ export function takeReturn() {
 }
 
 export const homeFor = (user) => (user?.role === 'Manager' ? '#/manager' : '#/');
+
+// The intro explains the employee's refill flow, so only employees get it, once per user until a reset.
+export const needsIntro = (user) => user?.role === 'Employee' && !hasSeenIntro(user.id);
 
 export async function currentUser() {
   const id = getSession();

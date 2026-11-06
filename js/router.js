@@ -18,6 +18,7 @@ const routes = [
   { pattern: '/decisions', view: () => import('./views/decisions.js'), tab: 'tasks', auth: true, role: 'Employee' },
   { pattern: '/storage', view: () => import('./views/storage.js'), tab: 'storage', auth: true },
   { pattern: '/storage/:productId', view: () => import('./views/storage-detail.js'), tab: 'storage', auth: true },
+  { pattern: '/intro', view: () => import('./views/intro.js'), auth: true, shell: false },
   { pattern: '/profile', view: () => import('./views/profile.js'), tab: 'profile', auth: true },
   { pattern: '/manager', view: () => import('./views/manager.js'), tab: 'team', auth: true, role: 'Manager' },
   { pattern: '/manager/new', view: () => import('./views/manager-new.js'), tab: 'team', auth: true, role: 'Manager' },

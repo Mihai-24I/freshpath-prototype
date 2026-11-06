@@ -142,6 +142,15 @@ export const getSession = () => localStorage.getItem(PREFIX + 'session');
 export const setSession = (userId) => localStorage.setItem(PREFIX + 'session', userId);
 export const clearSession = () => localStorage.removeItem(PREFIX + 'session');
 
+// Who has already seen the first-use intro: a list of user ids under `app:introSeen`.
+// It is an `app:*` key, so "Reset demo data" brings the intro back for the next login.
+const INTRO_KEY = PREFIX + 'introSeen';
+const introSeen = () => JSON.parse(localStorage.getItem(INTRO_KEY) ?? '[]');
+export const hasSeenIntro = (userId) => introSeen().includes(userId);
+export function markIntroSeen(userId) {
+  if (!hasSeenIntro(userId)) localStorage.setItem(INTRO_KEY, JSON.stringify([...introSeen(), userId]));
+}
+
 // Back to seed state: clears every `app:*` key except the session, so the
 // demo user stays logged in after "Reset demo data".
 export function reset() {

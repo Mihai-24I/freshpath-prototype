@@ -100,6 +100,15 @@ dd { margin: 0 0 0.75rem; }
 .qty-field { flex: 1; min-inline-size: 0; margin: 0; }
 .qty-field input { text-align: center; font-size: 1.5rem; }
 
+/* First-use intro: step dots (the "1 of 3" text carries the same information), one card at a time */
+.dots { display: flex; gap: 0.5rem; margin-block-start: 0.5rem; }
+.dots span { inline-size: 0.5rem; block-size: 0.5rem; box-sizing: border-box; border: 1.5px solid var(--outline); border-radius: 50%; }
+.dots span.active { background: var(--primary); border-color: var(--primary); }
+.view.intro { min-block-size: calc(100dvh - 2rem); grid-template-rows: auto 1fr auto; padding-block-start: 1rem; }
+.intro-card { padding: 1.5rem; align-self: center; }
+.intro-card .chip { justify-self: start; margin: 0; }
+.sticky-actions .skip { flex: 0 1 auto; }
+
 /* Manager screens */
 .feedback-form { display: grid; gap: 0.75rem; }
 .feedback-form button { margin: 0; inline-size: 100%; box-sizing: border-box; }

@@ -268,7 +268,7 @@ One step per chat. Start each chat with `/designlog`, read this file, build the 
 - [x] **12 · Manager screens.** 15, 16, 17.
   Done when: as Sam, Team shows today's decisions and open items (incl. a "Report to manager" from step 6); a note for today appears in Mia's Tasks after logging in as Mia, a task for a later date under "Coming up"; feedback sent in Review decisions appears in Mia's My decisions.
 
-- [ ] **13 · First-use intro.** 19, Replay intro in 13.
+- [x] **13 · First-use intro.** 19, Replay intro in 13.
   Done when: Mia's first login after Reset shows the 3 cards; Skip and Start both go to Overview; the next login skips the intro; "Replay intro" in Profile shows it again.
 
 - [ ] **14 · Accessibility pass and GitHub Pages.**

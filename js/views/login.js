@@ -1,4 +1,4 @@
-import { login, homeFor, takeReturn } from '../auth.js';
+import { login, homeFor, needsIntro, takeReturn } from '../auth.js';
 import { getAll } from '../data.js';
 
 let onSubmit = null;
@@ -66,7 +66,8 @@ export async function render(el) {
       setError(emailField, ' ');
       return setError(passwordField, 'Wrong email or password.');
     }
-    location.hash = takeReturn() ?? homeFor(user);
+    const back = takeReturn();
+    location.hash = needsIntro(user) ? '#/intro' : (back ?? homeFor(user));
   };
   form.addEventListener('submit', onSubmit);
   form.addEventListener('input', onInput);

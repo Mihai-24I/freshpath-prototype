@@ -30,13 +30,16 @@ export async function render(el, params, user) {
       </dl>
     </article>
     <div class="profile-actions">
+      <button class="border small-round" data-action="intro"><i>info</i><span>Replay intro</span></button>
       <button class="border small-round" data-action="reset"><i>restart_alt</i><span>Reset demo data</span></button>
       <button class="transparent small-round" data-action="logout"><i>logout</i><span>Log out</span></button>
     </div>`;
 
   onClick = (event) => {
     const action = event.target.closest('[data-action]')?.dataset.action;
-    if (action === 'reset') {
+    if (action === 'intro') {
+      location.hash = '#/intro';
+    } else if (action === 'reset') {
       reset();
       showSnackbar('Demo data reset');
     } else if (action === 'logout') {
