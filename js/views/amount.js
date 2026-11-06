@@ -1,19 +1,9 @@
-import { displayStatus } from '../data.js';
-import { STATUS } from '../status.js';
-import { loadRefill } from '../refill.js';
+import { loadRefill, afterPlacing } from '../refill.js';
 import { esc, formatTime } from '../util.js';
 import { state } from '../app.js';
 
 let root = null;
 let onClick = null;
-
-function afterState(d, unit, amount) {
-  const onDisplay = d.onDisplay + amount;
-  const status = displayStatus({ onDisplay, capacity: d.capacity });
-  const s = STATUS[status];
-  const percent = Math.round((onDisplay / d.capacity) * 100);
-  return { onDisplay, s, percent, label: `${percent}% full, ${onDisplay} of ${d.capacity} on display` };
-}
 
 export async function render(el) {
   const r = await loadRefill();
@@ -25,7 +15,7 @@ export async function render(el) {
   const { display: d, product, sub, own, min, max, suggested } = r;
   const unit = product.unit;
   const back = own ? `#/displays/${d.id}/own` : `#/displays/${d.id}/alternatives/${sub.id}`;
-  const first = afterState(d, unit, r.amount);
+  const first = afterPlacing(d, r.amount);
 
   const sales = sub
     ? `<article class="no-elevate small-round stack">
@@ -72,7 +62,7 @@ export async function render(el) {
 
   function update() {
     const a = state.refill.amount;
-    const f = afterState(d, unit, a);
+    const f = afterPlacing(d, a);
     amountEl.textContent = a;
     minus.disabled = a <= min;
     plus.disabled = a >= max;

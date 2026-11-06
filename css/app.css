@@ -92,9 +92,19 @@ dd { margin: 0 0 0.75rem; }
 .product-text { flex: 1; min-inline-size: 0; }
 .product-text .tag-row { margin-block-start: 0.25rem; }
 .sticky-actions button { margin: 0; flex: 1; }
-.choice-detail { padding: 0.75rem; border-radius: 0.5rem; background: var(--tertiary-container); color: var(--on-tertiary-container); }
-.choice-detail .warnings:empty { display: none; }
-.warnings li { display: flex; gap: 0.5rem; align-items: flex-start; }
+/* Change product: warning, amount and reason hang under the chosen row as one card with it */
+.choice-detail { margin-block-start: -0.5rem; padding: 0.75rem 1rem; border: 2px solid var(--primary); border-block-start: 0; border-radius: 0 0 0.5rem 0.5rem; background: var(--surface-container); }
+.product-option:has(input:checked):has(+ .choice-detail:not([hidden])) { border-end-start-radius: 0; border-end-end-radius: 0; }
+.choice-detail [hidden], .choice-detail .warnings:empty { display: none; }
+.warnings li { display: flex; gap: 0.5rem; align-items: flex-start; padding: 0.5rem 0.75rem; border-radius: 0.5rem; background: var(--tertiary-container); color: var(--on-tertiary-container); }
+.amount-row { align-items: center; }
+.amount-row .stepper { gap: 0.5rem; }
+.amount-inline { min-inline-size: 3.5rem; text-align: center; font-size: 1.5rem; font-weight: 500; }
+.amount-inline .small-text { font-size: 0.875rem; }
+.choice-detail .reason-toggle { margin: 0 0 0 -0.75rem; }
+.choice-detail .field { margin: 0; }
+.stock-row { align-items: center; }
+.stock-row .button { margin: 0; }
 
 /* Amount: big number between – and +; Placement: step checklist */
 .stepper { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }

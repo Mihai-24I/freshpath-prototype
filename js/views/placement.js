@@ -12,7 +12,9 @@ export async function render(el) {
     return;
   }
   root = el;
-  const { display: d, product, sub, store } = r;
+  const { display: d, product, sub, own, store } = r;
+  // An own choice sets its amount on the Change product screen, so Back goes there instead of to Amount.
+  const back = own ? (state.refill.ownBack ?? `#/displays/${d.id}/own`) : '#/refill/amount';
   const unit = product.unit;
   // A suggestion brings its own steps and pick-up spot; an own choice uses the store defaults and the product's storage spot.
   const steps = sub ? sub.placementSteps : store.defaultPlacementSteps;
@@ -22,7 +24,7 @@ export async function render(el) {
   const done = new Set(state.refill.stepsDone ?? []);
 
   el.innerHTML = `<div class="view">
-    <a class="button transparent small-round go-back" href="#/refill/amount"><i aria-hidden="true">arrow_back</i><span>Back</span></a>
+    <a class="button transparent small-round go-back" href="${esc(back)}"><i aria-hidden="true">arrow_back</i><span>Back</span></a>
     <div>
       <span class="small-text upper">Display ${esc(d.label)}</span>
       <h1 class="h5 small tight">How to place ${esc(product.shortName.toLowerCase())}</h1>

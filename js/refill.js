@@ -1,7 +1,16 @@
 // Resolves the refill in progress (state.refill, set by the Why / Own choice screens) into
 // display, product and the numbers the Amount, Placement and Confirm screens share.
-import { getAll } from './data.js';
+import { getAll, displayStatus } from './data.js';
+import { STATUS } from './status.js';
 import { state } from './app.js';
+
+// How the display looks once `amount` is placed; shared by the Amount and Change product screens.
+export function afterPlacing(display, amount) {
+  const onDisplay = display.onDisplay + amount;
+  const s = STATUS[displayStatus({ onDisplay, capacity: display.capacity })];
+  const percent = Math.round((onDisplay / display.capacity) * 100);
+  return { onDisplay, s, percent, label: `${percent}% full, ${onDisplay} of ${display.capacity} on display` };
+}
 
 export async function loadRefill() {
   const r = state.refill;

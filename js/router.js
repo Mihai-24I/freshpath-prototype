@@ -11,6 +11,7 @@ const routes = [
   { pattern: '/displays/:id/alternatives', view: () => import('./views/alternatives.js'), tab: 'overview', auth: true },
   { pattern: '/displays/:id/alternatives/:substituteId', view: () => import('./views/why.js'), tab: 'overview', auth: true },
   { pattern: '/displays/:id/own', view: () => import('./views/own.js'), tab: 'overview', auth: true },
+  { pattern: '/displays/:id/change', view: () => import('./views/own.js'), tab: 'overview', auth: true },
   { pattern: '/refill/amount', view: () => import('./views/amount.js'), tab: 'overview', auth: true },
   { pattern: '/refill/placement', view: () => import('./views/placement.js'), tab: 'overview', auth: true },
   { pattern: '/refill/confirm', view: () => import('./views/confirm.js'), tab: 'overview', auth: true },

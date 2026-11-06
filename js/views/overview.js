@@ -23,13 +23,18 @@ function cardHtml(d, hint) {
       <span class="chip no-round ${s.fill}"><i aria-hidden="true">${s.icon}</i><span>${s.word}</span></span>
     </div>
     <progress class="large ${s.bar}" value="${d.onDisplay}" max="${d.capacity}" aria-label="${esc(stock)}"></progress>
-    <p class="tight">${esc(stock)}</p>
+    <div class="row stock-row">
+      <p class="tight max">${esc(stock)}</p>
+      <a class="button transparent small-round" href="#/displays/${esc(d.id)}"><span>Open details</span><i aria-hidden="true">chevron_right</i></a>
+    </div>
     ${d.promo ? `<p class="small-text tight">Promo: ${esc(d.promo)}</p>` : ''}
     ${hint ? `<p class="tight"><i aria-hidden="true">warehouse</i> ${esc(hint)}</p>` : ''}
-    <nav class="tiny-space">
-      <a class="button border small-round max" href="#/displays/${esc(d.id)}">Open details</a>
-      ${needsRefill ? `<a class="button small-round max" href="#/displays/${esc(d.id)}/problem">Find alternatives</a>` : ''}
-    </nav>`;
+    ${needsRefill
+      ? `<nav class="tiny-space">
+          <a class="button border small-round max" href="#/displays/${esc(d.id)}/change"><i aria-hidden="true">swap_horiz</i><span>Change product</span></a>
+          <a class="button small-round max" href="#/displays/${esc(d.id)}/problem">Find alternatives</a>
+        </nav>`
+      : ''}`;
 }
 
 export async function render(el, params) {

@@ -26,12 +26,13 @@ Tabs:  2 Overview · 1 Tasks · 12 Storage · 13 Profile
 
 Refill (core flow):
 2 Overview ── tap Low/Empty tile ──> display card
-   ├─ Open details ──> 3 Display detail ── Find alternatives ─┐
-   └─ Find alternatives ──────────────────────────────────────┴─> 4 Report problem (optional reason)
+   ├─ Open details (text link) ──> 3 Display detail ── Find alternatives ─┐
+   ├─ Find alternatives ──────────────────────────────────────────────────┴─> 4 Report problem (optional reason)
+   └─ Change product ──> 11 Change product (amount inline) ── Next: how to place ──> 9 Placement
 4 ── Find replacement (no loading) ──> 6 Alternatives
    ├─ tap card ──> 7 Why this suggestion ── Use [product] ──> 8 Amount
    │                                     └─ See other options ──> 6
-   ├─ Choose my own product ──> 11 Own choice ── Use this product ──> 8 Amount
+   ├─ Choose my own product ──> 11 Change product ── Next: how to place ──> 9 Placement
    └─ (none in stock) "Report to manager" ──> 2 Overview + snackbar
 8 Amount ── Next: how to place ──> 9 Placement ── All placed ──> 10 Confirm
 10 Confirm ── Confirm ──> 2 Overview + snackbar "Display C updated · Undo" + updated tile
@@ -70,7 +71,7 @@ Routes are hash routes (AGENTS.md). The refill in progress (chosen display, prob
 ### 2 · Overview `#/` and `#/overview/:displayId` (start screen)
 - **Purpose:** see at a glance which display needs attention and act on it.
 - **Content:** title "Overview" + "Updated 13:42" (`store.json`); store map with display tiles A–I (status word + icon, gondolas touching); count chips "6 OK · 1 Low · 2 Empty" below the map; display card for the selected display (overline, product, status tag, stock bar, "4 of 35 pcs on display", promo). With `:displayId` the tile is selected and pulses (selection marker). All OK: "All displays are full. Nice work."
-- **Actions:** tap tile (select); tap chip (filter map); outlined "Open details"; filled "Find alternatives" (only for Low/Empty; for OK the card shows only "Open details"); arrow keys move between tiles.
+- **Actions:** tap tile (select); tap chip (filter map); text link "Open details" next to the stock line; outlined "Change product" + filled "Find alternatives" (only for Low/Empty; for OK the card shows only "Open details"); arrow keys move between tiles.
 - **After an action:** snackbar ("Display C updated" / "Reported to manager") with Undo where the action can be undone; the tile shows its new status at the same time.
 - **Answers:** test task 1; "confirmation states + updated overview after every action" (all five); "screen that highlights the suggested display" (U2 07:16); one primary + one secondary button (U2 05:23, U4 06:09); U2 09:54 yellow for low, red for empty (status colours). Stories 1 (urgency via status tags, see Left out), 2.
 
@@ -99,10 +100,10 @@ Routes are hash routes (AGENTS.md). The refill in progress (chosen display, prob
 - **Actions:** filled "Use mangoes"; text "See other options" → 6.
 - **Answers:** "summary on top, less text, clear title, consistent ratings" (U1 05:37, 18:05, 18:26; U3 02:19); test task 3; principle 3; story 3, 8.
 
-### 11 · Own choice `#/displays/:id/own`
-- **Purpose:** the one route to place a product the employee picks.
-- **Content:** back; "Pick any product · C is ambient, promo 2 for €3"; search field; product list (in storage only) with fit tag: `check_circle` Fits / `warning` Needs cooling / `warning` Not in promo; after selecting: the warning in accent with the reason (never blocks); "My reason (short, for the manager)" field.
-- **Actions:** filled "Use this product" → 8.
+### 11 · Change product `#/displays/:id/change` (from the display card) and `#/displays/:id/own` (from Alternatives)
+- **Purpose:** the one route to place a product the employee picks, in as few taps as possible (design option A).
+- **Content:** back (to the Overview from the card, to Alternatives from there); "Change product · H is cooled, no promo, 16 free spaces. Products that fit come first."; search field; product list (in storage only) with fit tag: `check_circle` Fits / `warning` Needs cooling / `warning` Not in promo; under the chosen product, as one card with it: the warning in accent with the reason (never blocks), "How many?" with – / + (suggested = expected sales, within what fits and is in storage) and "After placing: 10 of 16 on display, OK"; text button "Add a reason for the manager (optional)" opens the reason field.
+- **Actions:** filled "Next: how to place" → 9 (own choices skip 8 Amount; Back on 9 returns here with product, amount and reason kept).
 - **Answers:** "one clear route to change a product, search in the product list" (U2 04:30, 04:38; U3 04:38, 07:58; U4 04:08: selected item clearly marked); story 8 (own reason logged).
 
 ### 8 · Amount `#/refill/amount`
@@ -273,5 +274,8 @@ One step per chat. Start each chat with `/designlog`, read this file, build the 
 
 - [x] **14 · Accessibility pass and GitHub Pages.**
   Done when: every screen works with Tab / Enter / Esc and arrow keys on the map, focus moves to the heading after each route change; at 200% system font nothing is cut off and the main action is still reachable; all touch targets are ≥ 48 dp; the full refill flow works on the GitHub Pages URL on your phone (repo and Pages are set up already; all paths are relative).
+
+- [x] **15 · Change product shortcut (design option A).** 2 (card actions), 11 (amount inline), 9 (Back).
+  Done when: on a Low/Empty display card "Change product" opens 11 with Back to the Overview; picking a product shows the amount under it; "Next: how to place" goes straight to Placement and Back keeps product and amount; Confirm updates the display with the snackbar; the suggestion flow still goes through Amount.
 
 After step 14: heuristic analysis (10 heuristics) with screenshots, then breadboard V3 and updated user stories (HANDOVER "Still open").
