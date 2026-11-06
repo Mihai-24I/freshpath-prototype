@@ -262,7 +262,7 @@ One step per chat. Start each chat with `/designlog`, read this file, build the 
 - [x] **10 · Tasks and My decisions.** 1, 14.
   Done when: Tasks shows today's manager notes on top (incl. the priority of the day), open tasks, done tasks struck through and "Coming up"; ticking a task gives a snackbar with Undo; "Open" on the C task goes to Overview with C selected; My decisions shows the 3 seeded decisions plus the one from step 9, with feedback where there is some.
 
-- [ ] **11 · Storage and Correct stock.** 12, 18.
+- [x] **11 · Storage and Correct stock.** 12, 18.
   Done when: Storage lists products in storage sorted by sell-by, the most urgent tag in error colours; the sort chips re-order by quantity and promo; "Suggest display" on mangoes opens Overview with C selected and the line "Mangoes from storage fit here"; setting mangoes to a number below their amount on C removes them from C's alternatives, with a snackbar + Undo after Save.
 
 - [ ] **12 · Manager screens.** 15, 16, 17.

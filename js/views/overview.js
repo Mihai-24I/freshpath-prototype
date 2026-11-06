@@ -1,6 +1,7 @@
 import { getAll, displayStatus } from '../data.js';
 import { STATUS, STATUS_ORDER } from '../status.js';
 import { esc } from '../util.js';
+import { state } from '../app.js';
 import '../components/app-store-map.js';
 
 let root = null;
@@ -9,7 +10,7 @@ let onSelect = null;
 
 const unitLabel = (unit) => (unit === 'pcs' ? 'pcs' : `${unit}s`);
 
-function cardHtml(d) {
+function cardHtml(d, hint) {
   const s = STATUS[d.status];
   const needsRefill = d.status !== 'ok';
   const stock = `${d.onDisplay} of ${d.capacity} ${unitLabel(d.unit)} on display`;
@@ -24,6 +25,7 @@ function cardHtml(d) {
     <progress class="large ${s.bar}" value="${d.onDisplay}" max="${d.capacity}" aria-label="${esc(stock)}"></progress>
     <p class="tight">${esc(stock)}</p>
     ${d.promo ? `<p class="small-text tight">Promo: ${esc(d.promo)}</p>` : ''}
+    ${hint ? `<p class="tight"><i aria-hidden="true">warehouse</i> ${esc(hint)}</p>` : ''}
     <nav class="tiny-space">
       <a class="button border small-round max" href="#/displays/${esc(d.id)}">Open details</a>
       ${needsRefill ? `<a class="button small-round max" href="#/displays/${esc(d.id)}/problem">Find alternatives</a>` : ''}
@@ -68,11 +70,19 @@ export async function render(el, params) {
   const card = el.querySelector('#display-card');
   map.displays = models;
 
+  // "Suggest display" from Storage: say which product from storage fits the display it opened.
+  const hintFor = (d) => {
+    const s = state.suggest;
+    if (!s || s.displayId !== d.id) return '';
+    const name = productById.get(s.productId)?.shortName;
+    return name ? `${name} from storage fit here` : '';
+  };
   const showCard = () => {
     const d = models.find((m) => m.id === selectedId);
-    card.innerHTML = d ? cardHtml(d) : '<p class="tight">Tap a display to see its stock.</p>';
+    card.innerHTML = d ? cardHtml(d, hintFor(d)) : '<p class="tight">Tap a display to see its stock.</p>';
   };
   const select = (id) => {
+    if (state.suggest?.displayId !== id) state.suggest = null;
     selectedId = id;
     map.selected = id;
     showCard();
@@ -100,4 +110,5 @@ export function destroy() {
   root?.removeEventListener('display-select', onSelect);
   root?.removeEventListener('click', onClick);
   root = null;
+  state.suggest = null;
 }

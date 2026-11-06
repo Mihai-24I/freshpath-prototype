@@ -76,6 +76,24 @@ export async function availableSubstitutes(displayId) {
     .sort((a, b) => a.rank - b.rank);
 }
 
+// "Suggest display" match: a product fits a Low/Empty display when it is an available substitute there.
+// Returns Map(productId -> { displayId, label, promoFit }) with the display where the product ranks best
+// (ties: the emptier display); promoFit = it fits at least one display that has a promo.
+export async function displaySuggestions() {
+  const displays = await getAll('displays');
+  const best = new Map();
+  for (const d of displays.filter((x) => displayStatus(x) !== 'ok')) {
+    for (const s of await availableSubstitutes(d.id)) {
+      const cur = best.get(s.productId);
+      const better = !cur || s.rank < cur.rank || (s.rank === cur.rank && d.onDisplay < cur.onDisplay);
+      const promoFit = Boolean(cur?.promoFit || d.promo);
+      if (better) best.set(s.productId, { displayId: d.id, label: d.label, rank: s.rank, onDisplay: d.onDisplay, promoFit });
+      else cur.promoFit = promoFit;
+    }
+  }
+  return best;
+}
+
 // Confirming a refill (DESIGN 7.3): the display gets the new product and `amount` more on display (up to capacity),
 // the product's storage goes down, the display's open refill tasks are done and the decision is saved for My decisions.
 // Returns what undoRefill needs to put everything back.
