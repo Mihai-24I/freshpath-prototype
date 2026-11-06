@@ -48,6 +48,40 @@ button, .button { min-block-size: 3rem; }   /* touch targets >= 48 dp (DESIGN 3)
 .list-plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; }
 dd { margin: 0 0 0.75rem; }
 
+/* beer.css 5.0.3 forces pill buttons with !important on --_round; DESIGN 4.3 wants 8 dp */
+button, .button, .chip { --_round: 0.5rem !important; }
+/* Classes with "margin" in the name make beer.css drop the parent's padding (:has(>[class*=margin])), so use these */
+#app .tight { margin: 0; }
+#app .stack > * + * { margin-block-start: 0.75rem; }
+
+/* Overview: store map, display tiles, selection marker (DESIGN 6.4, 6.5) */
+.chip-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-block: 0.75rem; }
+app-store-map {
+  display: block; margin-block-start: 0.75rem; position: relative; block-size: 16rem; box-sizing: border-box;
+  background: var(--surface-container); border: 1.5px dashed var(--outline); border-radius: 0.5rem;
+}
+app-display-tile { position: absolute; inset-inline-start: calc(var(--x) * 1%); inset-block-start: calc(var(--y) * 1%); inline-size: calc(var(--w) * 1%); block-size: calc(var(--h) * 1%); min-block-size: 3rem; }
+app-display-tile[hidden] { display: none; }
+app-display-tile button.tile {
+  inline-size: 100%; block-size: 100%; margin: 0; padding: 0; flex-direction: column; gap: 0;
+  box-sizing: border-box; border: 1px solid var(--outline-variant);
+}
+app-display-tile button.tile.status-empty { border: 2px solid var(--error); }
+app-display-tile[join="start"] button.tile { border-start-end-radius: 0; border-end-end-radius: 0; }
+app-display-tile[join="middle"] button.tile { border-radius: 0; }
+app-display-tile[join="end"] button.tile { border-start-start-radius: 0; border-end-start-radius: 0; }
+.tile-top { display: flex; align-items: center; gap: 0.25rem; }
+.tile .display-letter { font-size: 1.125rem; line-height: 1.25; }
+.map-entrance { position: absolute; inset-inline: 0; inset-block-end: 0.25rem; display: flex; justify-content: center; align-items: center; gap: 0.25rem; color: var(--on-surface-variant); }
+.marks { position: absolute; inset: 0; pointer-events: none; }
+.mark { position: absolute; inline-size: 0.25rem; block-size: 0.03125rem; background: var(--primary); transform: rotate(var(--rot)); animation: mark-pulse 1s ease-in-out 3; }
+.mark-tl { --rot: 45deg; --dx: -0.044rem; --dy: -0.044rem; left: -0.276rem; top: -0.167rem; }
+.mark-tr { --rot: -45deg; --dx: 0.044rem; --dy: -0.044rem; right: -0.276rem; top: -0.167rem; }
+.mark-bl { --rot: -45deg; --dx: -0.044rem; --dy: 0.044rem; left: -0.276rem; bottom: -0.167rem; }
+.mark-br { --rot: 45deg; --dx: 0.044rem; --dy: 0.044rem; right: -0.276rem; bottom: -0.167rem; }
+@keyframes mark-pulse { 50% { transform: translate(var(--dx), var(--dy)) rotate(var(--rot)); } }
+@media (prefers-reduced-motion: reduce) { .mark { animation: none; } }
+
 /* Typography: Roboto everywhere, Roboto Serif Bold for titles and display letters */
 body { --font: Roboto, "Noto Sans", Arial, sans-serif; }
 :is(h1, h2, h3, h4, h5, h6), .display-letter, .wordmark { font-family: "Roboto Serif", serif; font-weight: 700; }

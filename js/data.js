@@ -56,6 +56,12 @@ export async function remove(collection, id) {
   return next.length !== items.length;
 }
 
+// Status rules (DESIGN 7.3): Empty = nothing left, Low = at most 25% of capacity.
+export function displayStatus({ onDisplay, capacity }) {
+  if (onDisplay <= 0) return 'empty';
+  return onDisplay <= capacity * 0.25 ? 'low' : 'ok';
+}
+
 // Session = plain user id under `app:session` (AGENTS.md). Only auth.js uses these.
 export const getSession = () => localStorage.getItem(PREFIX + 'session');
 export const setSession = (userId) => localStorage.setItem(PREFIX + 'session', userId);

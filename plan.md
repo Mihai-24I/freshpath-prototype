@@ -241,7 +241,7 @@ One step per chat. Start each chat with `/designlog`, read this file, build the 
 - [x] **3 · Login, auth guard, Profile.** Screen 0, `js/auth.js`, 13 (without Replay intro).
   Done when: opening `#/tasks` logged out goes to Login and back to Tasks after logging in as Mia; a wrong password shows a field error; reload keeps you logged in; Profile shows Mia's details; Reset demo data and Log out work; Sam lands on a placeholder Team screen and `#/manager` as Mia goes to Overview.
 
-- [ ] **4 · Overview: map, tiles, chips, display card.** 2, `<app-store-map>`, `<app-display-tile>`, selection marker, all-OK state.
+- [x] **4 · Overview: map, tiles, chips, display card.** 2, `<app-store-map>`, `<app-display-tile>`, selection marker, all-OK state.
   Done when: tiles A–I sit like the style guide (D-E-F and G-H-I touching), C says Low, E and H say Empty with icons; tapping C pulses the corner marks 3 times and fills the card ("4 of 35 pcs"); chips read "6 OK · 1 Low · 2 Empty" and filter the map; arrow keys move between tiles; `#/overview/d-e` opens with E selected; with reduced motion on, the marks don't move.
 
 - [ ] **5 · Display detail and Report problem.** 3, 4.
