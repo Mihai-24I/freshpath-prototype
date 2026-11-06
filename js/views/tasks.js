@@ -30,7 +30,7 @@ function noteHtml(t) {
 function comingHtml(t) {
   const icon = t.kind === 'note' ? 'sticky_note_2' : 'event';
   return `<li class="coming"><i aria-hidden="true">${icon}</i>
-    <span><b>${esc(t.title)}</b><br><span class="small-text">${esc(formatDay(t.date))} · ${esc(t.detail)}</span></span></li>`;
+    <span><b>${esc(t.title)}</b><br><span class="small-text">${esc([formatDay(t.date), t.detail].filter(Boolean).join(' · '))}</span></span></li>`;
 }
 
 export async function render(el, params, user) {

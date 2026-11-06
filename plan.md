@@ -265,7 +265,7 @@ One step per chat. Start each chat with `/designlog`, read this file, build the 
 - [x] **11 · Storage and Correct stock.** 12, 18.
   Done when: Storage lists products in storage sorted by sell-by, the most urgent tag in error colours; the sort chips re-order by quantity and promo; "Suggest display" on mangoes opens Overview with C selected and the line "Mangoes from storage fit here"; setting mangoes to a number below their amount on C removes them from C's alternatives, with a snackbar + Undo after Save.
 
-- [ ] **12 · Manager screens.** 15, 16, 17.
+- [x] **12 · Manager screens.** 15, 16, 17.
   Done when: as Sam, Team shows today's decisions and open items (incl. a "Report to manager" from step 6); a note for today appears in Mia's Tasks after logging in as Mia, a task for a later date under "Coming up"; feedback sent in Review decisions appears in Mia's My decisions.
 
 - [ ] **13 · First-use intro.** 19, Replay intro in 13.

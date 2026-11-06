@@ -100,6 +100,12 @@ dd { margin: 0 0 0.75rem; }
 .qty-field { flex: 1; min-inline-size: 0; margin: 0; }
 .qty-field input { text-align: center; font-size: 1.5rem; }
 
+/* Manager screens */
+.feedback-form { display: grid; gap: 0.75rem; }
+.feedback-form button { margin: 0; inline-size: 100%; box-sizing: border-box; }
+.feedback-form .field { margin: 0; }
+.tasks .task > .task-text { flex: 1; padding-block: 0.5rem; }
+
 /* Tasks and My decisions */
 .tasks .task { display: flex; align-items: center; gap: 0.5rem; background: var(--surface-container); border-radius: 0.5rem; padding: 0.25rem 0.75rem; }
 .tasks .task .button { margin: 0; flex: none; }

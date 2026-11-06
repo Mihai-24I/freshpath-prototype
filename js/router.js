@@ -20,6 +20,8 @@ const routes = [
   { pattern: '/storage/:productId', view: () => import('./views/storage-detail.js'), tab: 'storage', auth: true },
   { pattern: '/profile', view: () => import('./views/profile.js'), tab: 'profile', auth: true },
   { pattern: '/manager', view: () => import('./views/manager.js'), tab: 'team', auth: true, role: 'Manager' },
+  { pattern: '/manager/new', view: () => import('./views/manager-new.js'), tab: 'team', auth: true, role: 'Manager' },
+  { pattern: '/manager/decisions', view: () => import('./views/manager-decisions.js'), tab: 'team', auth: true, role: 'Manager' },
 ];
 
 const outlet = document.getElementById('app');
